@@ -1,0 +1,40 @@
+#app {
+  height: 100%;
+}
+
+.servicios .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.servicios .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicios .swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+.servicios .append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.servicios .append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}

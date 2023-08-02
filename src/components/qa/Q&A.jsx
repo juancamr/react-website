@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputSearch from "../../components/inputs/InputSearch";
+import AccordionList from "../accordion/AccordionList";
 
 const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
   const [search, setSearch] = useState("");
@@ -38,12 +39,7 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
         />
       </div>
       <div>
-        {questionsList.map((question) => (
-          <div>
-            <p className="font-bold">{question.question}</p>
-            <p>{question.answer}</p>
-          </div>
-        ))}
+        <AccordionList questions={questionsList} />
         <p className="text-gray-600">{error}</p>
       </div>
     </div>

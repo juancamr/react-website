@@ -1,6 +1,6 @@
 import AboutUs from "../pages/aboutUs/AboutUs";
 import Company from "../pages/Company";
-import Especialistas from "../pages/Especialistas";
+import Especialistas from "../pages/especialistas/Especialistas";
 import Questions from "../pages/Questions";
 
 export const ADMIN_URL = "https://admin.tiims.com.pe";
@@ -8,6 +8,65 @@ export const ADMIN_URL = "https://admin.tiims.com.pe";
 export const TOTAL_DOWNLOADS = 30;
 export const TOTAL_USERS = 50;
 export const TOTAL_PROVIDERS_HIRED = 40;
+
+export const LINK_USER_GOOGLE_PLAY = 'https://play.google.com/store/apps/details?id=com.tiims&hl=es_UY';
+export const LINK_ESPECIALISTA_GOOGLE_PLAY = 'https://play.google.com/store/apps/details?id=com.tiims.provider&hl=es_UY';
+
+export const usersComments = [
+  {
+    name: "Juan Carlos",
+    photo: "https://randomuser.me/api/portraits/women/66.jpg",
+    comment:
+      "Holauoaeu aouauaou aoeuoa aoeu aou  aoeuouaoeu a oeua oeu aoeu aoeu ",
+    rate: 5,
+  },
+  {
+    name: "Juan Carlos",
+    photo: "https://randomuser.me/api/portraits/men/60.jpg",
+    comment: "Hola la verdad es que me parece una mrd",
+    rate: 5,
+  },
+  {
+    name: "Juan Carlos",
+    photo: "https://randomuser.me/api/portraits/men/62.jpg",
+    comment: "Hola asnteuhsnao aoestnhuoau aeuaouaou aoeuaou oaeu ",
+    rate: 5,
+  },
+  {
+    name: "Juan Carlos",
+    photo: "https://randomuser.me/api/portraits/men/46.jpg",
+    comment: "santoehutsno hasnotehu tnao uhnatohe usntaoheu ntshaoeu",
+    rate: 5,
+  },
+];
+
+export const especialistasComments = [
+  {
+    name: "Juan Carlos",
+    photo: "assets/images/questions-background.jpg",
+    comment:
+      "Holauoaeu aouauaou aoeuoa aoeu aou  aoeuouaoeu a oeua oeu aoeu aoeu ",
+    rate: 5,
+  },
+  {
+    name: "Juan Carlos",
+    photo: "assets/images/company.jpg",
+    comment: "Hola la verdad es que me parece una mrd",
+    rate: 5,
+  },
+  {
+    name: "Juan Carlos",
+    photo: "assets/images/white-background.jpg",
+    comment: "Hola asnteuhsnao aoestnhuoau aeuaouaou aoeuaou oaeu ",
+    rate: 5,
+  },
+  {
+    name: "Juan Carlos",
+    photo: "assets/images/white-background.jpg",
+    comment: "santoehutsno hasnotehu tnao uhnatohe usntaoheu ntshaoeu",
+    rate: 5,
+  },
+];
 
 export const routes = [
   { name: "Especialistas", path: "/provider", component: Especialistas },
@@ -81,7 +140,7 @@ export const footerLinks = {
     name: "Contactanos",
     content: {
       direction: "Av. Javier Prado Este 560",
-      numberPhone: "+51 9435216539",
+      numberPhone: "soporte@tiims.com.pe",
     },
   },
 };
