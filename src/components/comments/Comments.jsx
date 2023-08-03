@@ -12,7 +12,7 @@ import { EffectCards } from "swiper/modules";
 
 const Comments = ({ comments, color }) => {
   return (
-    <div className="w-72 sm:w-96 md:w-80 mx-auto lg:w-80 xl:w-96 2xl:w-[500px]">
+    <div className="w-56 sm:w-96 md:w-80 mx-auto lg:w-80 xl:w-96 2xl:w-[500px]">
       <Swiper
         effect={"cards"}
         grabCursor={true}

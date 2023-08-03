@@ -41,12 +41,9 @@ export default function App() {
     <div className="servicios">
       <Bounce right>
         <Swiper
-          slidesPerView={2}
+          slidesPerView={window.innerWidth < 800 ? 2 : 3}
           centeredSlides={true}
-          spaceBetween={20}
-          // pagination={{
-          //   type: "fraction",
-          // }}
+          spaceBetween={window.innerWidth < 800 ? 20 : 60}
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
@@ -55,10 +52,10 @@ export default function App() {
             <SwiperSlide>
               <div
                 id={id}
-                className="h-full w-full bg-gradient-to-tr from-orange-500 via-slate-500 to-blue-500 rounded-3xl flex items-center"
+                className="h-full w-full bg-gradient-to-tr from-orange-500 via-slate-400 to-blue-500 rounded-3xl flex items-center"
               >
                 <div className="w-full">
-                  <div className="text-6xl mb-4">
+                  <div className="text-6xl md:text-7xl lg:text-9xl mb-4">
                     {service.type === "clean" && (
                       <i class="fa-solid fa-broom"></i>
                     )}
@@ -73,7 +70,9 @@ export default function App() {
                     )}
                   </div>
                   <div className="p-4">
-                    <h1 className="text-white uppercase text-xl ">{service.name}</h1>
+                    <h1 className="text-white uppercase text-xl ">
+                      {service.name}
+                    </h1>
                   </div>
                 </div>
               </div>

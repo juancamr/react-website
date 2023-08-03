@@ -3,7 +3,9 @@ import "./Link.css";
 const Link = ({ path, name }) => {
   return (
     <li className="link-navbar-first inline-block">
-      <a href={path}>{name}</a>
+      <a id={name} href={path}>
+        {name}
+      </a>
     </li>
   );
 };

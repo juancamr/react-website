@@ -38,7 +38,7 @@ function InstructionCard({ logo, word, color }) {
 
 export default function Instructions() {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-7 2xl:gap-10">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-7 2xl:gap-10 ">
       <InstructionCard
         logo="download"
         word="Descarga la app"

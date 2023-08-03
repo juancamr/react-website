@@ -1,7 +1,11 @@
 import Qa from "../components/qa/Q&A";
 import { questions } from "../common/questions/empresas";
+import { useEffect } from "react";
 
 const Company = () => {
+  useEffect(() => {
+    document.getElementById("Empresas").classList.add('active');
+  });
   return (
     <main className="py-14 px-2 bg-slate-50">
       <Qa

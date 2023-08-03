@@ -5,7 +5,7 @@ import { footerLinks } from "../../common/constants";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-slate-900">
       <div className="container">
         <div className="row">
           {/* <FooterSection data={footerLinks.company} /> */}
