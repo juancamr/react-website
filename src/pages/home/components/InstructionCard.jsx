@@ -74,21 +74,21 @@ export default function Instructions({ isHome, isAbout }) {
         ) : (
           <>
             <InstructionCard
-              logo="download"
-              word="Descarga la app"
+              logo="pay"
+              word="Metodo pago"
+              color="sky"
+            />
+            <InstructionCard
+              logo="pay"
+              word="Metodo pago"
               color="white-orange"
             />
             <InstructionCard
-              logo="select"
-              word="Selecciona tu servicio"
-              color="orange"
+              logo="pay"
+              word="Metodo pago"
+              color="blue"
             />
-            <InstructionCard
-              logo="clock"
-              word="Progr&aacute;malo"
-              color="sky"
-            />
-            <InstructionCard logo="pay" word="Paga y disfruta" color="blue" />
+            <InstructionCard logo="pay" word="Paga y disfruta" color="orange" />
           </>
         )}
       </div>

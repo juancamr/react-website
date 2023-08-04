@@ -7,11 +7,11 @@ export default function NavbarMobile() {
       <div
         className="
           rounded-3xl
-          p-2 backdrop-blur-md bg-white/90
+          p-2 backdrop-blur-md bg-white/80 dark:bg-black/50
           mt-4
           ml-4
           shadow-xl w-[105px]
-          left-0 z-20
+          left-0 z-10
       "
       >
         <a href="/">
@@ -30,7 +30,8 @@ export default function NavbarMobile() {
         <label
           for="active"
           class="menu-btn mt-4 mr-4 top-0 right-0 p-4
-          backdrop-blur-md bg-orange-400/80 z-20
+        backdrop-blur-md bg-white/80 dark:bg-black/50
+        shadow-xl 
           "
         >
           <span></span>

@@ -19,16 +19,16 @@ export default function Requisitos() {
         Aqu&iacute; te ayudamos
       </Paragraph>
       <div className="grid lg:grid-cols-2 gap-4 lg:px-20">
-        <div className="bg-slate-950 flex items-center">
+        <div className="bg-slate-50 dark:bg-slate-950 flex items-center">
           <div>
             <Heading className="lg:px-5 mb-3 text-orange-300">
               Requisitos
             </Heading>
-            <div className="text-white lg:px-5">
+            <div className="text-slate-800 dark:text-white lg:px-5">
               <ul className="space-y-5">
                 {requisitos.map((requisito, index) => (
                   <li key={index}>
-                    <Paragraph>
+                    <Paragraph >
                       {index + 1}. {requisito}
                     </Paragraph>
                   </li>

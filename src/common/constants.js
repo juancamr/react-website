@@ -4,6 +4,7 @@ import Especialistas from "../pages/especialistas/Especialistas";
 import Questions from "../pages/questions/Questions";
 
 export const ADMIN_URL = "https://admin.tiims.com.pe";
+export const WEBSITE_URL = "https://tiims.com.pe";
 
 export const TOTAL_DOWNLOADS = 30;
 export const TOTAL_USERS = 50;
@@ -165,3 +166,11 @@ export const misionVision = {
     image: "assets/images/vision.jpg",
   },
 };
+
+export const SOCIALS = {
+  TIKTOK: 'https://tiktok.com',
+  YOUTUBE: 'https://youtube.com',
+  LINKEDIN: 'https://linkedin.com',
+  FACEBOOK: 'https://facebook.com',
+  INSTAGRAM: 'https://instagram.com',
+}

@@ -1,10 +1,12 @@
 import Socials from "./Socials";
+import { LINK_USER_GOOGLE_PLAY, WEBSITE_URL } from "../../../common/constants";
 
 export default function Slogan() {
   return (
     <div
       className="flex items-center p-6 md:p-10
     bg-white
+    shadow-xl border border-gray-200
     rounded-3xl w-full"
     >
       <div>
@@ -16,7 +18,7 @@ export default function Slogan() {
         </p>
         <div className="mb-8 lg:mb-10 xl:mb-12">
           <a
-            href="https://google.com"
+            href={LINK_USER_GOOGLE_PLAY}
             className="
             px-5
             py-4
@@ -40,7 +42,7 @@ export default function Slogan() {
         </div>
         <div className="mb-8 lg:mb-10 xl:mb-12">
           <a
-            href="https://google.com"
+            href={`${WEBSITE_URL}/reservar`}
             className="
             px-5
             py-4

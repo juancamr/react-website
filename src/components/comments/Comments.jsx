@@ -36,7 +36,7 @@ const Comments = ({ comments, color }) => {
                     alt="profile"
                   />
                   <h1 className="text-slate-50 text-center">{comment.name}</h1>
-                  <p className="text-justify text-base font-light">
+                  <p className="text-justify text-xl font-light">
                     {comment.comment}
                   </p>
                   <div className="flex items-center justify-center space-x-1">

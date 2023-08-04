@@ -1,7 +1,19 @@
+import { useRef, useState } from "react";
 import Heading from "./text/Heading";
 import Paragraph from "./text/Paragraph";
+import { Modal } from "@mui/material";
 
 export default function () {
+  const input = useRef(null);
+  const [open, setOpen] = useState(false);
+
+  const handleSubscribe = () => {
+    if (input.current.value != "") {
+      setOpen(true);
+      input.current.value = "";
+    }
+  };
+
   return (
     <div
       className="lg:w-1/2 lg:mx-auto
@@ -10,7 +22,8 @@ export default function () {
         bg-slate-50 text-slate-900
         rounded-3xl
         p-8 md:p-14 lg:p-20 xl:p-20
-        shadow
+        border border-gray-200
+        shadow-xl
     "
     >
       <div className="w-full">
@@ -26,13 +39,44 @@ export default function () {
           col-span-3
         text-lg px-4 py-2
         "
+          ref={input}
           type="text"
           placeholder="yo@yo.com"
         />
-        <button className="bg-orange-400
+        <button
+          onClick={handleSubscribe}
+          className="bg-orange-400
+          hover:bg-orange-500
+          shadow-xl
         rounded-3xl px-3 col-span-2
-        ">Suscribirme</button>
+        text-base lg:text-xl
+        "
+        >
+          Suscribirme
+        </button>
       </div>
+
+      <Modal
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div
+          className="bg-slate-50
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        w-96 border rounded-3xl border-gray-400 shadow-xl p-8
+        "
+        >
+          <Heading className="mb-4">&#161;Suscrito!</Heading>
+          <Paragraph>
+            Muchas gracias por ser parte de esta gran comunidad, estar&aacute;s
+            al tanto de nuestras nuevas actualizaciones
+          </Paragraph>
+        </div>
+      </Modal>
     </div>
   );
 }

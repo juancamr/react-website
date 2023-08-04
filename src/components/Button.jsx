@@ -29,7 +29,7 @@ export default function Button({
     return (
       <a
         href={href}
-        className={`mb-0 text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2
+        className={`mb-0 text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-3xl px-5 py-2 text-center mr-2
       ${fullWidth && "w-full"}
       ${blue && "from-blue-400 via-blue-500 to-blue-600"}
       ${black && "from-slate-800 via-slate-900 to-slate-950"}
@@ -47,7 +47,12 @@ export default function Button({
       <button
         type={type}
         onClick={onClick}
-        className={`mb-0 text-white bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2
+        className={`mb-0 text-white bg-gradient-to-r
+        from-orange-400 via-orange-500
+        to-orange-600 hover:bg-gradient-to-br
+        focus:ring-4 focus:outline-none focus:ring-red-300
+        dark:focus:ring-red-800 font-medium rounded-3xl px-5 py-2.5
+        text-center mr-2
         ${fullWidth && "w-full"}
         ${blue && "from-blue-400 via-blue-500 to-blue-600"}
         ${black && "from-slate-800 via-slate-900 to-slate-950"}
