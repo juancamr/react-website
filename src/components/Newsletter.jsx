@@ -31,7 +31,7 @@ export default function () {
       </div>
       <Heading className="uppercase mb-3">Suscr&iacute;bete</Heading>
       <Paragraph className="mb-5">
-        Suscr&iacute;bete a nuestro newsletter y mantente actualizado.
+        Recibe promociones y descuentos en tus servicios 
       </Paragraph>
       <div className="grid grid-cols-5 gap-x-2 lg:w-1/2 mx-auto">
         <input
@@ -41,7 +41,7 @@ export default function () {
         "
           ref={input}
           type="text"
-          placeholder="yo@yo.com"
+          placeholder="ingresa tu correo "
         />
         <button
           onClick={handleSubscribe}
@@ -52,7 +52,7 @@ export default function () {
         text-base lg:text-xl
         "
         >
-          Suscribirme
+          Enviar
         </button>
       </div>
 

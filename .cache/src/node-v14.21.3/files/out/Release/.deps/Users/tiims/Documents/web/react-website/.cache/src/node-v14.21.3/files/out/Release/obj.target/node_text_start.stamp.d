@@ -1,0 +1,1 @@
+cmd_/Users/tiims/Documents/web/react-website/.cache/src/node-v14.21.3/files/out/Release/obj.target/node_text_start.stamp := touch /Users/tiims/Documents/web/react-website/.cache/src/node-v14.21.3/files/out/Release/obj.target/node_text_start.stamp

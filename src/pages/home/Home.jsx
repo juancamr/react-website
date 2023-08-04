@@ -15,7 +15,7 @@ const Home = () => {
     document.getElementById("Inicio").classList.add("active");
   });
   return (
-    <main className="py-20 lg:pt-4 min-h-screen space-y-16 md:space-y-20 xl:space-y-40 bg-slate-50 dark:bg-slate-950 2xl:pb-30 ">
+    <main className="py-20 lg:pt-4 min-h-screen space-y-16 md:space-y-20 xl:space-y-40 bg-slate-50 dark:bg-slate-900 2xl:pb-30 ">
       <div className="h-full grid lg:grid-cols-2 gap-4 px-4 xl:px-8 2xl:px-20">
         <div className="lg:hidden">
           <Banner />
@@ -42,7 +42,7 @@ const Home = () => {
         mb-6
         "
           >
-            Encuentra la experiencia ideal
+            Encuentra al experto ideal para ti 
           </h1>
           <Instructions isHome={true} />
         </div>
@@ -65,8 +65,18 @@ const Home = () => {
         >
           Servicios
         </h1>
-        <p className="text-gray-600 dark:text-slate-300 px-4 text-center text-lg md:text-xl lg:text-2xl xl:text-3xl leading-5 mb-6 xl:mb-8">
-          Descubre nuestra variedad de servicios
+        <p className="
+        text-gray-600 
+        dark:text-slate-300 px-6 
+        text-center 
+        text-lg 
+        md:text-xl 
+        lg:text-2xl 
+        xl:text-3xl 
+        leading-5 mb-6 
+        xl:mb-8
+                        ">
+          ¡Decide reservar o programar tu servicio según tu conveniencia y la opción de pago que prefieras!
         </p>
         <Servicios />
         <div className="flex justify-center">
@@ -79,12 +89,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 md:w-3/4 mx-auto">
+      {/* <div className="grid md:grid-cols-2 md:w-3/4 mx-auto">
         <div className="flex items-center justify-center md:justify-left">
           <div>
             <h1 className="text-gray-800 dark:text-slate-50 text-3xl md:text-4xl xl:text-5xl font-bold mb-5 text-center md:text-left px-4">
-              Mira que dicen nuestros clientes <br />
-              ...
+              Nuestros clientes  <br />
+              tienen su opinión 
             </h1>
             <p className="text-gray-600 dark:text-white text-center md:text-left text-xl md:text-2xl mb-8 px-4 ">
               Desliza para interactuar
@@ -94,7 +104,7 @@ const Home = () => {
         <Fade right>
           <Comments comments={usersComments} color="orange" />
         </Fade>
-      </div>
+      </div> */}
 
       <div className="relative py-20 xl:py-0">
         <img

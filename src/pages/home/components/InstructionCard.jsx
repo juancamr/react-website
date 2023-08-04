@@ -73,22 +73,10 @@ export default function Instructions({ isHome, isAbout }) {
           </>
         ) : (
           <>
-            <InstructionCard
-              logo="pay"
-              word="Metodo pago"
-              color="sky"
-            />
-            <InstructionCard
-              logo="pay"
-              word="Metodo pago"
-              color="white-orange"
-            />
-            <InstructionCard
-              logo="pay"
-              word="Metodo pago"
-              color="blue"
-            />
-            <InstructionCard logo="pay" word="Paga y disfruta" color="orange" />
+            <InstructionCard logo="pay" word="Yape" color="white-orange" />
+            <InstructionCard logo="pay" word="Plin" color="sky" />
+            <InstructionCard logo="pay" word="Efectivo" color="orange" />
+            <InstructionCard logo="pay" word="Cuenta bancaria" color="blue" />
           </>
         )}
       </div>

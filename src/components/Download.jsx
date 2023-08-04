@@ -1,3 +1,4 @@
+import { Zoom } from "react-reveal";
 import {
   LINK_USER_GOOGLE_PLAY,
   LINK_ESPECIALISTA_GOOGLE_PLAY,
@@ -5,8 +6,8 @@ import {
 
 export default function Download({ users, heading, subHeading }) {
   return (
-    <div
-      className="absolute
+      <div
+        className="absolute
         top-1/2
           w-3/4
           lg:w-1/2
@@ -17,9 +18,9 @@ export default function Download({ users, heading, subHeading }) {
         p-6 md:p-10 xl:p-20
         rounded-xl
         "
-    >
-      <h1
-        className="
+      >
+        <h1
+          className="
         text-center
         text-white-500
         font-bold
@@ -30,16 +31,16 @@ export default function Download({ users, heading, subHeading }) {
         px-4
         mb-2
         "
-      >
-        {heading}
-      </h1>
-      <p className="text-white text-center md:text-left text-xl md:text-2xl mb-6 px-4 ">
-        {subHeading}
-      </p>
-      <div className="flex justify-center">
-        <a
-          href={users ? LINK_USER_GOOGLE_PLAY : LINK_ESPECIALISTA_GOOGLE_PLAY}
-          className={`
+        >
+          {heading}
+        </h1>
+        <p className="text-white text-center md:text-left text-xl md:text-2xl mb-6 px-4 ">
+          {subHeading}
+        </p>
+        <div className="flex justify-center">
+          <a
+            href={users ? LINK_USER_GOOGLE_PLAY : LINK_ESPECIALISTA_GOOGLE_PLAY}
+            className={`
             px-5
             py-4
             xl:px-10
@@ -58,10 +59,10 @@ export default function Download({ users, heading, subHeading }) {
             rounded-3xl
             
             `}
-        >
-          Descarga la app <i class="fa-brands ml-2 fa-google-play"></i>
-        </a>
+          >
+            Descarga la app <i class="fa-brands ml-2 fa-google-play"></i>
+          </a>
+        </div>
       </div>
-    </div>
   );
 }

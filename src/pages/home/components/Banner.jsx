@@ -9,7 +9,7 @@ export default function Banner() {
 
   useEffect(() => {
     const typed = new Typed(firstMessage.current, {
-      strings: ["Necesito mantenimiento a mi refri"], // Strings to display
+      strings: ["Necesito un operario de limpieza URGENTE"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 300,
       typeSpeed: 50,
@@ -21,7 +21,7 @@ export default function Banner() {
     });
 
     const typed2 = new Typed(secondMessage.current, {
-      strings: ["Claro, estoy en camino, llegar&eacute; en 5 min."], // Strings to display
+      strings: ["Claro, estoy en camino, llegar&eacute; en 5 minutos"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
       startDelay: 3300,
       typeSpeed: 50,
@@ -47,7 +47,12 @@ export default function Banner() {
       />
 
       <Fade left>
-        <div className="p-4 lg:p-6 absolute top-[20%] left-[5%] backdrop-blur-md bg-white/40 dark:bg-black/30 rounded-xl dark:text-slate-50 text-gray-900 w-72">
+        <div className="p-4 lg:p-6
+        absolute top-[20%]
+        left-[5%] backdrop-blur-md
+        bg-white/40 dark:bg-black/30
+        rounded-xl dark:text-slate-50
+        text-gray-900 w-72">
           <div className="flex space-x-4">
             <img
               src="https://randomuser.me/api/portraits/men/66.jpg"

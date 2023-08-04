@@ -16,28 +16,28 @@ import { Pagination, Navigation } from "swiper/modules";
 export default function App() {
   const services = [
     {
-      type: "teach",
-      name: "Maestria",
-      image:
-        "https://wallpapers.com/images/hd/teacher-background-idqts901515fz8d8.jpg",
-    },
-    {
       type: "clean",
-      name: "Limpieza",
+      name: "limpieza",
       image:
         "https://i.pinimg.com/originals/29/7d/00/297d00acae50a29301b5f8a669056e23.png",
     },
     {
-      type: "wash",
-      name: "Lavado",
+      type: "security",
+      name: "seguridad",
       image:
-        "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+        "https://e1.pxfuel.com/desktop-wallpaper/122/518/desktop-wallpaper-modern-companies-need-to-switch-to-cloud-security-guard.jpg",
     },
     {
-      type: "fumigar",
-      name: "Fumigacion",
+      type: "diente",
+      name: "odontologia",
       image:
-        "https://irp-cdn.multiscreensite.com/4847e1c8/MOBILE/jpg/1960461-img1.w1024.jpg",
+        "https://fondosmil.com/fondo/89830.jpg",
+    },
+    {
+      type: "conserjeicon",
+      name: "conserje",
+      image:
+        "https://media.istockphoto.com/id/1038261104/es/foto/productos-de-limpieza-con-fondo-moderno-y-copia-espacio-para-texto-del-anuncio.jpg?s=612x612&w=0&k=20&c=T2NW5zrXEwCEuXu266TMsYMM8uvVt4PGGKnmvXyz3QA=",
     },
   ];
 
@@ -74,14 +74,14 @@ export default function App() {
                       {service.type === "clean" && (
                         <i class="fa-solid fa-broom"></i>
                       )}
-                      {service.type === "wash" && (
-                        <i class="fa-solid fa-hand-sparkles"></i>
+                      {service.type === "diente" && (
+                        <i class="fa-solid fa-tooth"></i>
                       )}
-                      {service.type === "fumigar" && (
-                        <i class="fa-solid fa-biohazard"></i>
+                      {service.type === "conserjeicon" && (
+                        <i class="fa-solid fa-person-shelter"></i>
                       )}
-                      {service.type === "teach" && (
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                      {service.type === "security" && (
+                        <i class="fa-solid fa-shield-halved"></i>
                       )}
                     </div>
                     <div className="p-4">

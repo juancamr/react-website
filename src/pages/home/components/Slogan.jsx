@@ -10,11 +10,29 @@ export default function Slogan() {
     rounded-3xl w-full"
     >
       <div>
-        <h1 className="text-gray-800 text-4xl md:text-6xl 2xl:text-8xl font-bold uppercase mb-3">
-          Facilita tu vida...
+        <h1 className="
+        text-gray-800
+        text-[28px]
+        leading-[29px]
+        md:text-3xl
+        lg:text-[55px]
+        lg:leading-[55px]
+        2xl:text-[53px]
+        2xl:leading-[3.5rem]
+        font-bold
+        uppercase
+        mb-3
+        ">
+          La app multiservicios N°1 del Perú
         </h1>
-        <p className="text-gray-400 text-xl lg:text-2xl mb-7 md:mb-10 leading-6">
-          Reserva tus servicios con nuestros mejores especialistas
+        <p className="
+        text-gray-400 
+        text-xl 
+        lg:text-2xl 
+        mb-7 
+        md:mb-10 
+        leading-6">
+          Contrata especialistas verificados y confiables para resolver tus tareas del hogar
         </p>
         <div className="mb-8 lg:mb-10 xl:mb-12">
           <a
@@ -64,11 +82,11 @@ export default function Slogan() {
             hover:from-orange-300 hover:via-orange-200 hover:to-orange-50
             "
           >
-            Contrata tus servicios <i class="ml-2 fa-solid fa-globe"></i>
+            Reserva tu servicio <i class="ml-2 fa-solid fa-globe"></i>
           </a>
         </div>
         <p className="text-gray-400 text-xl lg:text-2xl mb-4 leading-6">
-          Encuentranos en ...
+          Siguenos en 
         </p>
         <Socials />
       </div>

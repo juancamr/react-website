@@ -19,7 +19,7 @@ const Especialistas = () => {
   return (
     <main
       id="especialistas-main"
-      className="py-20 lg:pt-4 min-h-screen space-y-16 md:space-y-20 xl:space-y-40 bg-slate-50 dark:bg-slate-950 2xl:pb-30 "
+      className="py-20 lg:pt-4 min-h-screen space-y-16 md:space-y-20 xl:space-y-40 bg-slate-50 dark:bg-slate-900 2xl:pb-30 "
     >
       <div className="h-full grid lg:grid-cols-2 gap-4 px-4 xl:px-8 2xl:px-20">
         <div className="lg:hidden">
@@ -31,7 +31,7 @@ const Especialistas = () => {
         </div>
       </div>
 
-      <Container className="bg-slate-50 dark:bg-slate-950">
+      <Container className="bg-slate-50 dark:bg-slate-900">
         <Requisitos />
       </Container>
 
@@ -42,7 +42,7 @@ const Especialistas = () => {
         <Instructions isHome={false} />
       </Container>
 
-      <div className="grid md:grid-cols-2 md:w-3/4 mx-auto bg-slate-50 dark:bg-slate-950">
+      {/* <div className="grid md:grid-cols-2 md:w-3/4 mx-auto bg-slate-50 dark:bg-slate-900">
         <div className="hidden lg:flex">
           <Fade left>
             <Comments comments={usersComments} color="blue" />
@@ -67,13 +67,13 @@ const Especialistas = () => {
             <Comments comments={usersComments} color="blue" />
           </Fade>
         </div>
-      </div>
+      </div> */}
 
       <div className="px-4">
         <Qa
           styles="bg-gradient-to-tr from-slate-400 via-blue-200 to-slate-400 p-8 rounded-3xl"
-          heading="Preguntas? Aqu&iacute; las resolvemos"
-          searchPlaceholder="&#191;C&oacute;mo genero ingresos?"
+          heading="Resolvemos tus dudas"
+          searchPlaceholder="&#191;C&oacute;mo empiezo a generar ingresos?"
           questions={questions}
         />
       </div>

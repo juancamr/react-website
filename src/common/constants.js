@@ -1,5 +1,5 @@
 import AboutUs from "../pages/aboutUs/AboutUs";
-import Company from "../pages/Company";
+import Company from "../pages/company/Company";
 import Especialistas from "../pages/especialistas/Especialistas";
 import Questions from "../pages/questions/Questions";
 
@@ -14,6 +14,7 @@ export const LINK_USER_GOOGLE_PLAY =
   "https://play.google.com/store/apps/details?id=com.tiims&hl=es_UY";
 export const LINK_ESPECIALISTA_GOOGLE_PLAY =
   "https://play.google.com/store/apps/details?id=com.tiims.provider&hl=es_UY";
+export const LINK_COMPANY = "https://company.tiims.com.pe/login";
 
 export const usersComments = [
   {
@@ -150,27 +151,29 @@ export const footerLinks = {
 
 export const misionVision = {
   mission: {
-    title: "Mision",
+    title: "Misión",
     text: {
-      heading: "Ver mejor xd",
-      content: "holamnudt asontehu sntaoheu tahou oeau tnaohe tnu",
+      heading: "Solución",
+      content:
+        "En Tiims, nos enfocamos en empoderar tanto a nuestros clientes como a los especialistas que brindan servicios en Lima. Queremos proporcionales una solución única, comodidad y fiabilidad inigualables y brindarles el preciado regalo del tiempo para disfrutar de lo que realmente importa.",
     },
     image: "assets/images/mision.jpg",
   },
   vision: {
-    title: "Vision",
+    title: "Visión",
     text: {
-      heading: "Ser los mejores",
-      content: "holamnudt asontehu oeau tnaohe tnu",
+      heading: "Conectar",
+      content:
+        "En Tiims buscamos convertirnos en la plataforma referente de servicios especializados en Perú, reconocida por conectar a las personas con especialistas de primera categoría, revolucionando así la forma en la que se accede a los servicios y simplificando la vida de nuestros clientes.",
     },
     image: "assets/images/vision.jpg",
   },
 };
 
 export const SOCIALS = {
-  TIKTOK: 'https://tiktok.com',
-  YOUTUBE: 'https://youtube.com',
-  LINKEDIN: 'https://linkedin.com',
-  FACEBOOK: 'https://facebook.com',
-  INSTAGRAM: 'https://instagram.com',
-}
+  TIKTOK: "https://tiktok.com",
+  YOUTUBE: "https://youtube.com",
+  LINKEDIN: "https://linkedin.com",
+  FACEBOOK: "https://facebook.com",
+  INSTAGRAM: "https://instagram.com",
+};

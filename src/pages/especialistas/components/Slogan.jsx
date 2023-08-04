@@ -9,11 +9,23 @@ export default function Slogan() {
     rounded-3xl w-full"
     >
       <div>
-        <h1 className="text-white text-4xl md:text-6xl 2xl:text-8xl font-bold uppercase mb-3">
-          Imagina tenerlo todo...
+        <h1 className="
+        text-white 
+        text-4xl 
+        lg:text-7xl
+        md:text-xl 
+        font-bold 
+        uppercase mb-3">
+          Trabaja con TIIMS
         </h1>
-        <p className="text-slate-200 text-xl lg:text-2xl mb-7 md:mb-10 leading-6">
-          Consigue tus servicios a tus precios
+        <p className="
+        text-slate-200
+         text-xl 
+         lg:text-3xl 
+         mb-7 
+         md:mb-10 
+         leading-6">
+            Gana más de S/ 2,400 al mes, trabajando en tus tiempos libres
         </p>
         <div className="mb-8 lg:mb-10 xl:mb-12">
           <a
@@ -36,7 +48,7 @@ export default function Slogan() {
             hover:from-blue-700 hover:via-blue-600 hover:to-blue-500
             "
           >
-            Descarga la app <i class="fa-brands ml-2 fa-google-play"></i>
+            Registrate aquí <i class="fa-brands ml-2 fa-google-play"></i>
           </a>
         </div>
         <p className="text-slate-200 text-xl lg:text-2xl mb-4 leading-6">

@@ -13,12 +13,12 @@ export default function AccordionELement({ question, answer, index }) {
         id={`panel${index + 1}a-header`}
       >
         <Typography>
-          <p className="font-bold text-gray-800 text-xl">{question}</p>
+          <p className="font-medium text-gray-800 text-xl">{question}</p>
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography>
-          <p className="text-lg">{answer}</p>
+          <p className="text-lg font-light">{answer}</p>
         </Typography>
       </AccordionDetails>
     </Accordion>
