@@ -1,22 +1,16 @@
+import * as React from "react";
 import AccordionELement from "./AccordionElement";
-import "./AccordionList.css";
 
-const AccordionList = ({ questions }) => {
+export default function AccordionList({ questions }) {
   return (
-    <section>
-      <div className="container">
-        <div className="accordion">
-          {questions.map((question, index) => (
-            <AccordionELement
-              question={question.question}
-              answer={question.answer}
-              index={index}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div>
+      {questions.map((question, index) => (
+        <AccordionELement
+          question={question.question}
+          answer={question.answer}
+          index={index + 1}
+        />
+      ))}
+    </div>
   );
-};
-
-export default AccordionList;
+}

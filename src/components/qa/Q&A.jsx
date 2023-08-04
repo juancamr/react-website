@@ -28,7 +28,7 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
   };
   return (
     <div className={`md:w-1/2 mx-auto ${styles}`}>
-      <h1 className="text-center text-3xl text-gray-800 font-bold mb-5">
+      <h1 className="text-center text-3xl text-gray-800 font-bold mb-5 z-20">
         {heading}
       </h1>
       <div className="mb-5">
@@ -40,7 +40,9 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
       </div>
       <div>
         <AccordionList questions={questionsList} />
-        <p className="text-gray-600">{error}</p>
+        <p className="text-gray-600 md:text-md lg:text-lg xl:text-xl">
+          {error}
+        </p>
       </div>
     </div>
   );

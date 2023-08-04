@@ -38,9 +38,10 @@ const Home = () => {
           >
             Encuentra la experiencia ideal
           </h1>
-          <Instructions />
+          <Instructions isHome={true} />
         </div>
       </div>
+
       <div className="px-4 xl:px-8  2xl:px-20">
         <h1
           className="

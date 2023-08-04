@@ -6,7 +6,7 @@ import "./LinkList.css";
 const LinkList = () => {
 
   return (
-    <nav className="bg-slate-100 dark:bg-slate-950 navbar py-5 flex items-center justify-center lg:space-x-20 xl: space-x-40 2xl:space-x-60 transition-all">
+    <nav className="bg-slate-950 navbar py-5 flex items-center justify-center lg:space-x-20 xl: space-x-40 2xl:space-x-60 transition-all">
       <a href="/">
         <img src="assets/images/logo-tiims.png" className="h-16 w-40" alt="" />
       </a>

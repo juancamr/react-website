@@ -29,6 +29,10 @@ function InstructionCard({ logo, word, color }) {
           {logo === "select" && <i class="fa-solid fa-square-check"></i>}
           {logo === "clock" && <i class="fa-solid fa-clock"></i>}
           {logo === "pay" && <i class="fa-solid fa-money-bill"></i>}
+
+          {logo === "seguro" && <i class="fa-solid fa-shield-halved"></i>}
+          {logo === "rapido" && <i class="fa-solid fa-gauge-simple-high"></i>}
+          {logo === "simple" && <i class="fa-solid fa-hands"></i>}
         </div>
         <p className="text-xl xl:text-2xl text-right font-bold">{word}</p>
       </div>
@@ -36,21 +40,58 @@ function InstructionCard({ logo, word, color }) {
   );
 }
 
-export default function Instructions() {
-  return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-7 2xl:gap-10 ">
-      <InstructionCard
-        logo="download"
-        word="Descarga la app"
-        color="white-orange"
-      />
-      <InstructionCard
-        logo="select"
-        word="Selecciona tu servicio"
-        color="orange"
-      />
-      <InstructionCard logo="clock" word="Progr&aacute;malo" color="sky" />
-      <InstructionCard logo="pay" word="Paga y disfruta" color="blue" />
-    </div>
-  );
+export default function Instructions({ isHome, isAbout }) {
+  if (isAbout) {
+    return (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 xl:gap-7 2xl:gap-10 ">
+        <InstructionCard logo="seguro" word="Segura" color="blue" />
+        <InstructionCard logo="rapido" word="R&aacute;pida" color="orange" />
+        <InstructionCard logo="simple" word="Simple" color="sky" />
+      </div>
+    );
+  } else {
+    return (
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-7 2xl:gap-10 ">
+        {isHome ? (
+          <>
+            <InstructionCard
+              logo="download"
+              word="Descarga la app"
+              color="white-orange"
+            />
+            <InstructionCard
+              logo="select"
+              word="Selecciona tu servicio"
+              color="orange"
+            />
+            <InstructionCard
+              logo="clock"
+              word="Progr&aacute;malo"
+              color="sky"
+            />
+            <InstructionCard logo="pay" word="Paga y disfruta" color="blue" />
+          </>
+        ) : (
+          <>
+            <InstructionCard
+              logo="download"
+              word="Descarga la app"
+              color="white-orange"
+            />
+            <InstructionCard
+              logo="select"
+              word="Selecciona tu servicio"
+              color="orange"
+            />
+            <InstructionCard
+              logo="clock"
+              word="Progr&aacute;malo"
+              color="sky"
+            />
+            <InstructionCard logo="pay" word="Paga y disfruta" color="blue" />
+          </>
+        )}
+      </div>
+    );
+  }
 }

@@ -47,8 +47,8 @@ export default function Download({ users, heading, subHeading }) {
             bg-gradient-to-r
             ${
               users
-                ? "from-orange-500 via-orange-600 to-orange-700"
-                : "from-blue-500 via-blue-600 to-blue-700"
+                ? "from-orange-500 via-orange-600 to-orange-700 hover:from-orange-700 hover:via-orange-600 hover:to-orange-500"
+                : "from-blue-500 via-blue-600 to-blue-700 hover:from-blue-700 hover:via-blue-600 hover:to-blue-500"
             }
             text-white
             text-xl
@@ -56,7 +56,7 @@ export default function Download({ users, heading, subHeading }) {
             text-md
             shadow-lg
             rounded-3xl
-            hover:from-orange-700 hover:via-orange-600 hover:to-orange-500
+            
             `}
         >
           Descarga la app <i class="fa-brands ml-2 fa-google-play"></i>

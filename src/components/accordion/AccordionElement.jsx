@@ -1,19 +1,26 @@
-import "./AccordionElement.css";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function AccordionELement({ question, answer, index }) {
   return (
-    <div className="accordion-item" id={`question${index}`}>
-      <a className="accordion-link" href={`#question${index}`}>
-        <div className="flex">
-          <h3>{question}</h3>
-        </div>
-        <i class="fa-solid fa-arrow-right"></i>
-        <i class="fa-solid fa-arrow-down"></i>
-      </a>
-      <div className="answer">
-        <p>{answer}</p>
-      </div>
-      <hr />
-    </div>
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls={`panel${index + 1}a-content`}
+        id={`panel${index + 1}a-header`}
+      >
+        <Typography>
+          <p className="font-bold text-gray-800 text-xl">{question}</p>
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          <p className="text-lg">{answer}</p>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
   );
 }
