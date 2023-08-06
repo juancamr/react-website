@@ -1,3 +1,0 @@
-#!/bin/sh
-set -x
-exec ./configure --prefix=/Users/tiims/Documents/web/react-website/versions/node/v14.21.3
