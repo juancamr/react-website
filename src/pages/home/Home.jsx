@@ -41,7 +41,7 @@ const Home = () => {
         mb-6
         "
           >
-            Encuentra al experto ideal para ti 
+            Encuentra al experto ideal para ti
           </h1>
           <Instructions isHome={true} />
         </div>
@@ -64,7 +64,8 @@ const Home = () => {
         >
           Servicios
         </h1>
-        <p className="
+        <p
+          className="
         text-gray-600 
         dark:text-slate-300 px-6 
         text-center 
@@ -74,13 +75,15 @@ const Home = () => {
         xl:text-3xl 
         leading-5 mb-6 
         xl:mb-8
-                        ">
-          ¡Decide reservar o programar tu servicio según tu conveniencia y la opción de pago que prefieras!
+                        "
+        >
+          ¡Decide reservar o programar tu servicio según tu conveniencia y la
+          opción de pago que prefieras!
         </p>
         <Servicios />
         <div className="flex justify-center">
           <a
-            href="https://tiims.com.pe/reservar"
+            href="https://tiims.com.pe/app/reservar"
             className="bg-orange-500 hover:bg-orange-600 text-white py-4 px-9 rounded-3xl lg:mt-4 text-lg xl:text-2xl transition-colors"
           >
             Descubre m&aacute;s{" "}

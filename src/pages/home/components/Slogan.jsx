@@ -63,9 +63,9 @@ export default function Slogan() {
             Descarga la app <i class="fa-brands ml-2 fa-google-play"></i>
           </a>
         </div>
-        <div className="mb-8 lg:mb-10 xl:mb-12">
+        <div className="mb-8 lg:mb-10 xl:mb-12 hidden md:block">
           <a
-            href={`${WEBSITE_URL}/reservar`}
+            href={`${WEBSITE_URL}/app/reservar`}
             className="
             px-5
             py-4

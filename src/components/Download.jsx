@@ -65,9 +65,10 @@ export default function Download({ users, heading, subHeading }) {
       </div>
       <div className="flex justify-center">
         {users && (
-          <a
-            href={`${WEBSITE_URL}/reservar`}
-            className="
+          <div className="hidden md:block mt-5">
+            <a
+              href={`${WEBSITE_URL}/app/reservar`}
+              className="
             px-5
             py-4
             xl:px-10
@@ -87,9 +88,10 @@ export default function Download({ users, heading, subHeading }) {
             rounded-3xl
             hover:from-orange-300 hover:via-orange-200 hover:to-orange-50
             "
-          >
-            Reserva tu servicio <i class="ml-2 fa-solid fa-globe"></i>
-          </a>
+            >
+              Reserva tu servicio <i class="ml-2 fa-solid fa-globe"></i>
+            </a>
+          </div>
         )}
       </div>
     </div>
