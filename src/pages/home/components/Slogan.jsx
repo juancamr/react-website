@@ -10,7 +10,8 @@ export default function Slogan() {
     rounded-3xl w-full"
     >
       <div>
-        <h1 className="
+        <h1
+          className="
         text-gray-800
         text-[28px]
         leading-[29px]
@@ -22,17 +23,21 @@ export default function Slogan() {
         font-bold
         uppercase
         mb-3
-        ">
+        "
+        >
           La app multiservicios N°1 del Perú
         </h1>
-        <p className="
+        <p
+          className="
         text-gray-400 
         text-xl 
         lg:text-2xl 
         mb-7 
         md:mb-10 
-        leading-6">
-          Contrata especialistas verificados y confiables para resolver tus tareas del hogar
+        leading-6"
+        >
+          Contrata especialistas verificados y confiables para resolver tus
+          tareas del hogar
         </p>
         <div className="mb-8 lg:mb-10 xl:mb-12">
           <a
@@ -86,7 +91,7 @@ export default function Slogan() {
           </a>
         </div>
         <p className="text-gray-400 text-xl lg:text-2xl mb-4 leading-6">
-          Siguenos en 
+          S&iacute;guenos en
         </p>
         <Socials />
       </div>

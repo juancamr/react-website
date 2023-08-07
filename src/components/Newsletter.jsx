@@ -2,15 +2,31 @@ import { useRef, useState } from "react";
 import Heading from "./text/Heading";
 import Paragraph from "./text/Paragraph";
 import { Modal } from "@mui/material";
+import { ADMIN_URL } from "../common/constants";
 
 export default function () {
   const input = useRef(null);
   const [open, setOpen] = useState(false);
 
-  const handleSubscribe = () => {
+  const subscribe = async () => {
+    await fetch(ADMIN_URL, {
+      method: "POST",
+      body: JSON.stringify({
+        email: input.current.value,
+      }),
+    })
+      .then((data) => data.json())
+      .then((response) => {
+        if (response.success) {
+          setOpen(true);
+          input.current.value = "";
+        }
+      });
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
     if (input.current.value != "") {
-      setOpen(true);
-      input.current.value = "";
     }
   };
 
@@ -31,20 +47,22 @@ export default function () {
       </div>
       <Heading className="uppercase mb-3">Suscr&iacute;bete</Heading>
       <Paragraph className="mb-5">
-        Recibe promociones y descuentos en tus servicios 
+        Recibe promociones y descuentos en tus servicios
       </Paragraph>
-      <div className="grid grid-cols-5 gap-x-2 lg:w-1/2 mx-auto">
+      <form
+        onSubmit={onSubmit}
+        className="grid grid-cols-5 gap-x-2 lg:w-1/2 mx-auto"
+      >
         <input
           className="rounded-3xl border border-gray-200 shadow-xl
           col-span-3
         text-lg px-4 py-2
         "
           ref={input}
-          type="text"
-          placeholder="ingresa tu correo "
+          type="email"
+          placeholder="alguien@ejemplo.com"
         />
         <button
-          onClick={handleSubscribe}
           className="bg-orange-400
           hover:bg-orange-500
           shadow-xl
@@ -54,7 +72,7 @@ export default function () {
         >
           Enviar
         </button>
-      </div>
+      </form>
 
       <Modal
         open={open}

@@ -29,7 +29,7 @@ export default function Paquetes() {
       </div>
       <div className="text-center">
         <a
-          href={"https://wa.me/986327221"}
+          href={"https://wa.me/984432668"}
           className="
             px-5
             py-4

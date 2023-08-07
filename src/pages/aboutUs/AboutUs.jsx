@@ -11,13 +11,13 @@ const AboutUs = () => {
   return (
     <main
       id="main-about-us"
-      className="px-4 py-24 relative min-h-screen space-y-16 md:space-y-20 bg-slate-900"
+      className="px-4 py-24 relative min-h-screen space-y-16 md:space-y-28 bg-slate-50 dark:bg-slate-900"
     >
       <Stats />
-      <MissionVission />
       <div className="w-full px-4 xl:px-8 2xl:px-40">
         <WhyChooseUs />
       </div>
+      <MissionVission />
     </main>
   );
 };

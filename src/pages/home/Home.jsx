@@ -81,7 +81,7 @@ const Home = () => {
         <div className="flex justify-center">
           <a
             href="https://tiims.com.pe/reservar"
-            className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-3xl lg:mt-4 text-lg xl:text-xl"
+            className="bg-orange-500 hover:bg-orange-600 text-white py-4 px-9 rounded-3xl lg:mt-4 text-lg xl:text-2xl transition-colors"
           >
             Descubre m&aacute;s{" "}
           </a>

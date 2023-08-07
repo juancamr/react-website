@@ -7,14 +7,16 @@ export default function WhyChooseUs() {
     <section>
       <Heading
         className="
-        text-center text-slate-50
+        text-center
+        text-gray-800
+        dark:text-slate-50
         uppercase
         mb-2
         "
       >
         &#191;Por qu&eacute; elegirnos?
       </Heading>
-      <Paragraph className="text-center text-white mb-4 mb-6 xl:mb-10">
+      <Paragraph className="text-center text-gray-600 dark:text-white mb-4 xl:mb-10">
         Porque nuestra app es...{" "}
       </Paragraph>
       <Instructions isAbout={true} />

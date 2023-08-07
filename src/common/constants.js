@@ -97,7 +97,7 @@ export const footerLinks = {
         path: `${ADMIN_URL}/terms.html`,
       },
       {
-        name: "Politica y privacidad",
+        name: "Política de privacidad",
         path: `${ADMIN_URL}/privacy.html`,
       },
     ],

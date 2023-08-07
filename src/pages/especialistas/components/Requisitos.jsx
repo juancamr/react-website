@@ -58,7 +58,7 @@ export default function Requisitos() {
         </div>
         <div className="lg:px-4 lg:col-span-2">
           <img
-            src="https://img.freepik.com/free-psd/business-man-illustration_1150-58986.jpg?w=1380&t=st=1691385272~exp=1691385872~hmac=60d7aca719806ebbdcd1806b2c8462a89595ac0f9a081d0d52978e60a40bf064"
+            src="assets/images/requisitos.jpg"
             alt="image"
             className="object-cover h-full w-full rounded-3xl md:h-72 lg:h-96"
           />

@@ -5,7 +5,10 @@ export default function Slogan({ text }) {
     <div
       className="flex items-center p-6 md:p-10
     bg-white
-    rounded-3xl w-full"
+    rounded-3xl w-full
+    border border-gray-200
+    shadow-xl
+    "
     >
       <div>
         <h1 className="text-gray-800 text-4xl md:text-6xl 2xl:text-8xl font-bold uppercase mb-3">
