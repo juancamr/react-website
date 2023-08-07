@@ -1,3 +1,9 @@
+const Desde = ({ isWhite }) => (
+  <span className={`text-xl ${!isWhite ? "text-gray-500" : "text-slate-200"}`}>
+    desde{" "}
+  </span>
+);
+
 export default function PlanesReclutamiento() {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-10 gap-5 xl:gap-0">
@@ -10,8 +16,11 @@ export default function PlanesReclutamiento() {
             <i className="fa-solid fa-cube text-slate-50 text-xl"></i>
           </div>
           <div className="bg-blue-200 text-blue-800 text-sm uppercase rounded-3xl px-3 py-1 w-fit mb-6">
-            Reclutatamiento 90&#176;
+            Selecci&oacute;n 90&#176;
           </div>
+          <p>
+            <Desde />
+          </p>
           <p className="text-slate-950 text-5xl mb-10">S/215</p>
           <ul className="text-base text-gray-800 mb-6">
             <li>
@@ -35,9 +44,12 @@ export default function PlanesReclutamiento() {
           <i className="fa-solid fa-cube text-slate-50 text-xl"></i>
         </div>
         <div className="bg-slate-50 text-blue-800 uppercase rounded-3xl px-3 py-1 w-fit mb-6">
-          Reclutatamiento 360&#176;
+          Selecci&oacute;n 360&#176;
         </div>
-        <p className="text-slate-50 text-5xl mb-10">S/2456</p>
+        <p>
+          <Desde isWhite={true} />
+        </p>
+        <p className="text-slate-50 text-5xl mb-10">S/2256</p>
         <ul className="text-base text-slate-50 mb-6">
           <li>
             <i className="fa-solid fa-check px-1.5 py-1 text-slate-50 rounded-full bg-blue-700 mr-2 mb-2 text-xs"></i>
@@ -91,8 +103,11 @@ export default function PlanesReclutamiento() {
             <i className="fa-solid fa-cube text-slate-50 text-xl"></i>
           </div>
           <div className="bg-blue-200 text-blue-800 text-sm uppercase rounded-3xl px-3 py-1 w-fit mb-6">
-            Reclutatamiento 180&#176;
+            Selecci&oacute;n 180&#176;
           </div>
+          <p>
+            <Desde />
+          </p>
           <p className="text-slate-950 text-5xl mb-10">S/279</p>
           <ul className="text-base text-gray-800 mb-6">
             <li>
