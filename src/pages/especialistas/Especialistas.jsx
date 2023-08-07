@@ -1,4 +1,3 @@
-import { Fade, Flip } from "react-reveal";
 import Comments from "../../components/comments/Comments";
 import { usersComments } from "../../common/constants";
 import { useEffect } from "react";

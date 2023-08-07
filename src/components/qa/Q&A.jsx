@@ -31,13 +31,15 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
       <h1 className="text-center text-3xl text-gray-800 font-bold mb-5 z-20">
         {heading}
       </h1>
-      <div className="mb-5">
-        <InputSearch
-          onChangeEvent={onChangeEvent}
-          placeholder={searchPlaceholder}
-          value={search}
-        />
-      </div>
+      {questions.length > 5 && (
+        <div className="mb-5">
+          <InputSearch
+            onChangeEvent={onChangeEvent}
+            placeholder={searchPlaceholder}
+            value={search}
+          />
+        </div>
+      )}
       <div>
         <AccordionList questions={questionsList} />
         <p className="text-gray-600 md:text-md lg:text-lg xl:text-xl">

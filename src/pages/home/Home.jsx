@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./Home.css";
-import { Fade } from "react-reveal";
 import Comments from "../../components/comments/Comments";
 import { usersComments } from "../../common/constants";
 import Banner from "./components/Banner";

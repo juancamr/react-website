@@ -1,9 +1,10 @@
-import { Zoom } from "react-reveal";
-
 export default function PlanesReclutamiento() {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-10 gap-5 xl:gap-0">
-      <div className="flex items-center xl:col-span-3 w-full">
+      <div
+        className="flex items-start xl:items-center xl:col-span-3 w-full
+      "
+      >
         <div className="rounded-3xl xl:rounded-r-none border border-gray-400 p-7 md:p-10 shadow-xl w-full bg-slate-50">
           <div className="p-3.5 rounded-full bg-blue-500 w-14 text-center mb-3.5">
             <i className="fa-solid fa-cube text-slate-50 text-xl"></i>

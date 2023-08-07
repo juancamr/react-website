@@ -6,9 +6,9 @@ import Questions from "../pages/questions/Questions";
 export const ADMIN_URL = "https://admin.tiims.com.pe";
 export const WEBSITE_URL = "https://tiims.com.pe";
 
-export const TOTAL_DOWNLOADS = 30;
-export const TOTAL_USERS = 50;
-export const TOTAL_PROVIDERS_HIRED = 40;
+export const TOTAL_DOWNLOADS = 110;
+export const TOTAL_USERS = 90;
+export const TOTAL_PROVIDERS_HIRED = 80;
 
 export const LINK_USER_GOOGLE_PLAY =
   "https://play.google.com/store/apps/details?id=com.tiims&hl=es_UY";
@@ -79,6 +79,15 @@ export const routes = [
   { name: "Nosotros", path: "/nosotros", component: AboutUs },
 ];
 
+export const SOCIALS = {
+  TIKTOK: "https://www.tiktok.com/@tiims_peru?_t=8eLWKCM6hyX&_r=1",
+  // YOUTUBE: "https://youtube.com",
+  LINKEDIN: "https://www.linkedin.com/company/tiims/",
+  FACEBOOK:
+    "https://www.facebook.com/profile.php?id=100091151310015&mibextid=LQQJ4d",
+  INSTAGRAM: "https://instagram.com/tiims_peru?igshid=MzRlODBiNWFlZA==",
+};
+
 export const footerLinks = {
   legal: {
     name: "Legal",
@@ -124,19 +133,19 @@ export const footerLinks = {
     links: [
       {
         name: "fab fa-facebook-f",
-        path: "/",
+        path: SOCIALS.FACEBOOK,
       },
       {
         name: "fab fa-instagram",
-        path: "/",
+        path: SOCIALS.INSTAGRAM,
       },
       {
         name: "fab fa-linkedin-in",
-        path: "/",
+        path: SOCIALS.LINKEDIN,
       },
       {
         name: "fab fa-tiktok",
-        path: "/",
+        path: SOCIALS.TIKTOK,
       },
     ],
   },
@@ -144,7 +153,7 @@ export const footerLinks = {
     name: "Contactanos",
     content: {
       direction: "Av. Javier Prado Este 560",
-      numberPhone: "soporte@tiims.com.pe",
+      numberPhone: "contacto@tiims.com.pe",
     },
   },
 };
@@ -168,12 +177,4 @@ export const misionVision = {
     },
     image: "assets/images/vision.jpg",
   },
-};
-
-export const SOCIALS = {
-  TIKTOK: "https://tiktok.com",
-  YOUTUBE: "https://youtube.com",
-  LINKEDIN: "https://linkedin.com",
-  FACEBOOK: "https://facebook.com",
-  INSTAGRAM: "https://instagram.com",
 };

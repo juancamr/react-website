@@ -1,7 +1,6 @@
 import Heading from "../../../components/text/Heading";
 import Paragraph from "../../../components/text/Paragraph";
 import { LINK_COMPANY } from "../../../common/constants";
-import { Bounce, Zoom } from "react-reveal";
 
 export default function TopContainer() {
   return (
@@ -20,7 +19,6 @@ export default function TopContainer() {
           Simplifica operaciones, aumenta la productividad y concéntrate en el
           crecimiento de tu empresa.
         </Paragraph>
-        <Zoom>
           <div className="mb-8 lg:mb-10 xl:mb-12 flex justify-center">
             <a
               href={LINK_COMPANY}
@@ -45,9 +43,7 @@ export default function TopContainer() {
               Empieza ya <i class="fa-solid fa-globe ml-2"></i>
             </a>
           </div>
-        </Zoom>
       </div>
-      <Bounce bottom>
         <div
           className="
           absolute
@@ -66,7 +62,6 @@ export default function TopContainer() {
           "
           />
         </div>
-      </Bounce>
     </div>
   );
 }

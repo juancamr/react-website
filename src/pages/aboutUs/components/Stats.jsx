@@ -1,4 +1,4 @@
-import { Fade } from "react-reveal";
+import { motion } from "framer-motion";
 import Counter from "../../../components/animations/Counter";
 import {
   TOTAL_DOWNLOADS,
@@ -58,15 +58,23 @@ const Stats = () => {
           </div>
           {/* </Fade> */}
 
-          <div>
-            <Fade right>
-              <img
-                src="https://wallpapercave.com/wp/wp11876501.jpg"
-                className="fancy-border-radius rotate-lg-6 w-full shadow-lg dark:shadow-black/20"
-                alt=""
-              />
-            </Fade>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              ease: "easeOut",
+              duration: 1,
+              // x: { duration: 1 },
+            }}
+          >
+            <img
+              src="assets/images/building_about_us.webp"
+              className="fancy-border-radius rotate-lg-6 w-full shadow-lg dark:shadow-black/20
+              2xl:h-[650px]
+              "
+              alt=""
+            />
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,10 +1,7 @@
-import { Zoom } from "react-reveal";
-
 function InstructionCard({ logo, word, color }) {
   return (
-    <Zoom top>
-      <div
-        className={`rounded-3xl p-6 2xl:p-10
+    <div
+      className={`rounded-3xl p-6 2xl:p-10
 
         ${
           color === "sky" &&
@@ -22,21 +19,61 @@ function InstructionCard({ logo, word, color }) {
           color === "orange" &&
           "bg-gradient-to-r from-orange-300 via-orange-500 to-orange-700 text-white"
         }
+        ${
+          color === "purple" &&
+          "bg-gradient-to-r from-purple-300 via-purple-500 to-purple-700 text-white"
+        }
+        ${
+          color === "cyan" &&
+          "bg-gradient-to-r from-cyan-300 via-cyan-500 to-cyan-700 text-white"
+        }
+        ${
+          color === "green" &&
+          "bg-gradient-to-r from-green-300 via-green-500 to-green-700 text-white"
+        }
     `}
-      >
-        <div className="text-4xl xl:text-6xl mb-6 xl:mb-12">
-          {logo === "download" && <i class="fa-solid fa-download"></i>}
-          {logo === "select" && <i class="fa-solid fa-square-check"></i>}
-          {logo === "clock" && <i class="fa-solid fa-clock"></i>}
-          {logo === "pay" && <i class="fa-solid fa-money-bill"></i>}
+    >
+      <div className="text-4xl xl:text-6xl mb-6 xl:mb-12">
+        {logo === "download" && <i class="fa-solid fa-download"></i>}
+        {logo === "select" && <i class="fa-solid fa-square-check"></i>}
+        {logo === "clock" && <i class="fa-solid fa-clock"></i>}
+        {logo === "pay" && <i class="fa-solid fa-money-bill"></i>}
 
-          {logo === "seguro" && <i class="fa-solid fa-shield-halved"></i>}
-          {logo === "rapido" && <i class="fa-solid fa-gauge-simple-high"></i>}
-          {logo === "simple" && <i class="fa-solid fa-hands"></i>}
-        </div>
-        <p className="text-xl xl:text-2xl text-right font-bold">{word}</p>
+        {logo === "seguro" && <i class="fa-solid fa-shield-halved"></i>}
+        {logo === "rapido" && <i class="fa-solid fa-gauge-simple-high"></i>}
+        {logo === "simple" && <i class="fa-solid fa-hands"></i>}
+
+        {logo === "yape" && (
+          <img
+            src="https://seeklogo.com/images/Y/yape-app-logo-1FD46D1120-seeklogo.com.png"
+            className="h-20 w-20"
+            alt="yape"
+          />
+        )}
+        {logo === "plin" && (
+          <img
+            src="https://seeklogo.com/images/P/plin-logo-967A4AF583-seeklogo.com.png"
+            className="h-20 w-20"
+            alt="plin"
+          />
+        )}
+        {logo === "efectivo" && (
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2331/2331941.png"
+            className="h-20 w-20"
+            alt="plin"
+          />
+        )}
+        {logo === "tarjeta" && (
+          <img
+            src="https://images.vexels.com/media/users/3/263269/isolated/preview/a461aa900b9a0fc2c3b1533899ed29d0-icono-de-tarjetas-de-visita-de-dinero.png"
+            className="h-20 w-20"
+            alt="plin"
+          />
+        )}
       </div>
-    </Zoom>
+      <p className="text-xl xl:text-2xl text-right font-bold">{word}</p>
+    </div>
   );
 }
 
@@ -73,10 +110,14 @@ export default function Instructions({ isHome, isAbout }) {
           </>
         ) : (
           <>
-            <InstructionCard logo="pay" word="Yape" color="white-orange" />
-            <InstructionCard logo="pay" word="Plin" color="sky" />
-            <InstructionCard logo="pay" word="Efectivo" color="orange" />
-            <InstructionCard logo="pay" word="Cuenta bancaria" color="blue" />
+            <InstructionCard logo="yape" word="Yape" color="purple" />
+            <InstructionCard logo="plin" word="Plin" color="cyan" />
+            <InstructionCard logo="efectivo" word="Efectivo" color="green" />
+            <InstructionCard
+              logo="tarjeta"
+              word="Cuenta bancaria"
+              color="blue"
+            />
           </>
         )}
       </div>

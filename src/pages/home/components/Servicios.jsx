@@ -1,7 +1,5 @@
-import React, { useRef, useState } from "react";
+import { SwiperSlide, Swiper } from "swiper/react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Bounce } from "react-reveal";
 
 // Import Swiper styles
 import "swiper/css";
@@ -30,8 +28,7 @@ export default function App() {
     {
       type: "diente",
       name: "odontologia",
-      image:
-        "https://fondosmil.com/fondo/89830.jpg",
+      image: "https://fondosmil.com/fondo/89830.jpg",
     },
     {
       type: "conserjeicon",
@@ -43,59 +40,57 @@ export default function App() {
 
   return (
     <div className="servicios">
-      <Bounce right>
-        <Swiper
-          slidesPerView={window.innerWidth < 800 ? 2 : 3}
-          centeredSlides={true}
-          spaceBetween={window.innerWidth < 800 ? 20 : 60}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {services.map((service, id) => (
-            <SwiperSlide>
-              <div
-                key={id}
-                id={id}
-                className="h-full w-full
+      <Swiper
+        slidesPerView={window.innerWidth < 800 ? 2 : 3}
+        centeredSlides={false}
+        spaceBetween={window.innerWidth < 800 ? 20 : 60}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {services.map((service, id) => (
+          <SwiperSlide>
+            <div
+              key={id}
+              id={id}
+              className="h-full w-full
                 rounded-3xl flex items-center relative"
-              >
-                <img
-                  className="
+            >
+              <img
+                className="
                 w-full h-full object-cover rounded-3xl brightness-50
                 "
-                  src={service.image}
-                  alt="service-image"
-                />
-                {/* bg-gradient-to-tr from-orange-500 via-slate-400 to-blue-500 */}
-                <div className="w-full h-full absolute flex items-center justify-center top-0 left-0">
-                  <div>
-                    <div className="text-6xl md:text-7xl lg:text-9xl mb-4">
-                      {service.type === "clean" && (
-                        <i class="fa-solid fa-broom"></i>
-                      )}
-                      {service.type === "diente" && (
-                        <i class="fa-solid fa-tooth"></i>
-                      )}
-                      {service.type === "conserjeicon" && (
-                        <i class="fa-solid fa-person-shelter"></i>
-                      )}
-                      {service.type === "security" && (
-                        <i class="fa-solid fa-shield-halved"></i>
-                      )}
-                    </div>
-                    <div className="p-4">
-                      <h1 className="text-white uppercase text-xl ">
-                        {service.name}
-                      </h1>
-                    </div>
+                src={service.image}
+                alt="service-image"
+              />
+              {/* bg-gradient-to-tr from-orange-500 via-slate-400 to-blue-500 */}
+              <div className="w-full h-full absolute flex items-center justify-center top-0 left-0">
+                <div>
+                  <div className="text-6xl md:text-7xl lg:text-9xl mb-4">
+                    {service.type === "clean" && (
+                      <i class="fa-solid fa-broom"></i>
+                    )}
+                    {service.type === "diente" && (
+                      <i class="fa-solid fa-tooth"></i>
+                    )}
+                    {service.type === "conserjeicon" && (
+                      <i class="fa-solid fa-person-shelter"></i>
+                    )}
+                    {service.type === "security" && (
+                      <i class="fa-solid fa-shield-halved"></i>
+                    )}
+                  </div>
+                  <div className="p-4">
+                    <h1 className="text-white uppercase text-xl ">
+                      {service.name}
+                    </h1>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Bounce>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <main
       id="main-about-us"
-      className="px-4 py-24 relative min-h-screen space-y-16 md:space-y-20"
+      className="px-4 py-24 relative min-h-screen space-y-16 md:space-y-20 bg-slate-900"
     >
       <Stats />
       <MissionVission />
