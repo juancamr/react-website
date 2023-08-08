@@ -49,11 +49,6 @@ export default function Banner() {
       className="relative h-full w-full
         2xl:h-[800px] "
     >
-      <img
-        className="object-cover h-full w-full rounded-3xl shadow-xl"
-        src="assets/images/mockup.webp"
-        alt="image"
-      />
 
       <div
         className="p-4 lg:p-6

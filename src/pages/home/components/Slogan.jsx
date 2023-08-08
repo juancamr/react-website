@@ -5,8 +5,6 @@ export default function Slogan() {
   return (
     <div
       className="flex items-center p-6 md:p-10
-    bg-white
-    shadow-xl border border-gray-200
     rounded-3xl w-full"
     >
       <div>

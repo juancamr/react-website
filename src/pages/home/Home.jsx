@@ -14,7 +14,10 @@ const Home = () => {
     document.getElementById("Inicio").classList.add("active");
   });
   return (
-    <main className="py-20 lg:pt-4 min-h-screen space-y-16 md:space-y-20 xl:space-y-40 bg-slate-50 dark:bg-slate-900 2xl:pb-30 ">
+    <main className="py-20 pt-28 min-h-screen
+    space-y-16 md:space-y-20 xl:space-y-40 bg-slate-50 dark:bg-slate-900
+    2xl:pb-30
+    ">
       <div className="h-full grid lg:grid-cols-2 gap-4 px-4 xl:px-8 2xl:px-20">
         <div className="lg:hidden">
           <Banner />
