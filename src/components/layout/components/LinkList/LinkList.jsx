@@ -6,22 +6,37 @@ import "./LinkList.css";
 
 const LinkList = () => {
   useEffect(() => {
-    const navbar = document.getElementById('navbar')
-    window.onscroll = function() {
-      if (window.scrollY >= 100) {
-        navbar.classList.add('bg-slate-50')
-        navbar.classList.add('shadow-xl')
-      } else {
-        navbar.classList.remove('bg-slate-50')
-        navbar.classList.remove('shadow-xl')
-      }
-    }
-  }, [])
+    // const navbar = document.querySelector("#navbar");
+    // const links = document.querySelectorAll("#navbar a");
+    // function changeColorLinks(color) {
+    //   links.forEach(function (link) {
+    //     if (color === "gray") {
+    //       link.classList.add("gray-link");
+    //     } else {
+    //       link.classList.add("white-link");
+    //     }
+    //   });
+    // }
+    // window.onscroll = function () {
+    //   if (window.scrollY >= 100) {
+    //     navbar.classList.add("bg-slate-50");
+    //     navbar.classList.add("shadow-xl");
+    //     changeColorLinks("gray");
+    //   } else {
+    //     navbar.classList.remove("bg-slate-50");
+    //     navbar.classList.remove("shadow-xl");
+    //     changeColorLinks("white");
+    //   }
+    // };
+  }, []);
   return (
-    <nav id="navbar" className="navbar py-5 flex items-center justify-center lg:space-x-20 xl: space-x-40 2xl:space-x-60 transition-all z-20
-    w-full fixed
-    ">
-
+    <nav
+      id="navbar"
+      className="navbar py-3 flex items-center justify-center lg:space-x-20 xl:space-x-40 2x:space-x-60
+        transition-all bg-beige
+        fixed z-20 w-full
+    "
+    >
       <a href="/">
         <img src="assets/images/logo-tiims.png" className="h-14 w-40" alt="" />
       </a>

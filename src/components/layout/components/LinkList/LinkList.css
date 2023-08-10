@@ -1,10 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700");
-.navbar nav {
-  font-family: "Open Sans Condensed", sans-serif;
-}
 .navbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+.gray-link {
+  color: gray !important;
+}
+
+.white-link {
+  color: white !important;
 }

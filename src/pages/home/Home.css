@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&display=swap");
 
-* {
-  font-family: "League Spartan", sans-serif;
-}
-
-.top-container {
-  background: rgb(240, 101, 8);
-  background: linear-gradient(
-    352deg,
-    rgba(240, 101, 8, 1) 30%,
-    rgba(255, 255, 255, 1) 100%
-  );
+#home-container {
+  background-image: url("../../../public/assets/images/blurred_vivid.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

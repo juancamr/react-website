@@ -10,14 +10,9 @@ export default function Slogan() {
       <div>
         <h1
           className="
-        text-gray-800
-        text-[28px]
-        leading-[29px]
+        text-slate-50
         md:text-3xl
-        lg:text-[55px]
-        lg:leading-[55px]
-        2xl:text-[53px]
-        2xl:leading-[3.5rem]
+        2xl:text-7xl
         font-bold
         uppercase
         mb-3
@@ -27,7 +22,7 @@ export default function Slogan() {
         </h1>
         <p
           className="
-        text-gray-400 
+        text-slate-200 
         text-xl 
         lg:text-2xl 
         mb-7 
@@ -88,7 +83,7 @@ export default function Slogan() {
             Reserva tu servicio <i class="ml-2 fa-solid fa-globe"></i>
           </a>
         </div>
-        <p className="text-gray-400 text-xl lg:text-2xl mb-4 leading-6">
+        <p className="text-slate-200 text-xl lg:text-2xl mb-3 leading-6">
           S&iacute;guenos en
         </p>
         <Socials />
