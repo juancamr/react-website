@@ -6,13 +6,14 @@ export default function CustomH3({ styles, children }) {
     ${styles}
 
     // default
-    text-[2.5rem]
-    font-medium
+    text-2xl
+    font-bold
 
     lg:text-[3.25rem]
+    leading-[50px]
 `}
     >
-      <slot />
+      {children}
     </h2>
   );
 }

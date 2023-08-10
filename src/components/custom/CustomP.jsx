@@ -10,7 +10,7 @@ export default function CustomP({ styles, children }) {
 
     lg:text-xl
 
-    xl:text-2xl
+    xl:text-xl
 `}
     >
       {children}

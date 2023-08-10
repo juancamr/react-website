@@ -7,6 +7,7 @@ export default function CustomH1({ styles, children }) {
 
     // default
     text-5xl
+    font-bold
     
     lg:text-6xl
     

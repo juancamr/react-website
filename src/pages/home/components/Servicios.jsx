@@ -1,96 +1,134 @@
 import { SwiperSlide, Swiper } from "swiper/react";
-// Import Swiper React components
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./Servicios.css";
-
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import Container from "../../../components/Container";
+import CustomH2 from "../../../components/custom/CustomH2";
+import CustomButton from "../../../components/custom/CustomButton";
+import { WEBSITE_URL } from "../../../common/constants";
+import CustomP from "../../../components/custom/CustomP";
 
-export default function App() {
-  const services = [
-    {
-      type: "clean",
-      name: "limpieza",
-      image:
-        "https://i.pinimg.com/originals/29/7d/00/297d00acae50a29301b5f8a669056e23.png",
-    },
-    {
-      type: "security",
-      name: "seguridad",
-      image:
-        "https://e1.pxfuel.com/desktop-wallpaper/122/518/desktop-wallpaper-modern-companies-need-to-switch-to-cloud-security-guard.jpg",
-    },
-    {
-      type: "diente",
-      name: "odontologia",
-      image: "https://fondosmil.com/fondo/89830.jpg",
-    },
-    {
-      type: "conserjeicon",
-      name: "conserje",
-      image:
-        "https://media.istockphoto.com/id/1038261104/es/foto/productos-de-limpieza-con-fondo-moderno-y-copia-espacio-para-texto-del-anuncio.jpg?s=612x612&w=0&k=20&c=T2NW5zrXEwCEuXu266TMsYMM8uvVt4PGGKnmvXyz3QA=",
-    },
-  ];
+const services = [
+  {
+    icon: "fa-solid fa-broom",
+    name: "Limpieza",
+  },
+  {
+    icon: "fa-solid fa-shield",
+    name: "Seguridad",
+  },
+  {
+    icon: "fa-solid fa-tooth",
+    name: "Odontologia",
+  },
+  {
+    icon: "fa-solid fa-person",
+    name: "Conserje",
+  },
+];
 
+function Form({ first, second, third, icon, name }) {
   return (
-    <div className="servicios">
-      <Swiper
-        slidesPerView={window.innerWidth < 800 ? 2 : 3}
-        centeredSlides={false}
-        spaceBetween={window.innerWidth < 800 ? 20 : 60}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
+    <div className="relative">
+      <img
+        src={`assets/images/update/${
+          first ? "first_form" : second ? "second_form" : "third_form"
+        }.png`}
+        alt="form"
+      />
+      <div
+        className="absolute
+      top-0
+      left-0
+      h-full
+      w-full
+      flex
+      items-center
+      justify-center
+      "
       >
-        {services.map((service, id) => (
-          <SwiperSlide>
-            <div
-              key={id}
-              id={id}
-              className="h-full w-full
-                rounded-3xl flex items-center relative"
-            >
-              <img
-                className="
-                w-full h-full object-cover rounded-3xl brightness-50
-                "
-                src={service.image}
-                alt="service-image"
-              />
-              {/* bg-gradient-to-tr from-orange-500 via-slate-400 to-blue-500 */}
-              <div className="w-full h-full absolute flex items-center justify-center top-0 left-0">
-                <div>
-                  <div className="text-6xl md:text-7xl lg:text-9xl mb-4">
-                    {service.type === "clean" && (
-                      <i class="fa-solid fa-broom"></i>
-                    )}
-                    {service.type === "diente" && (
-                      <i class="fa-solid fa-tooth"></i>
-                    )}
-                    {service.type === "conserjeicon" && (
-                      <i class="fa-solid fa-person-shelter"></i>
-                    )}
-                    {service.type === "security" && (
-                      <i class="fa-solid fa-shield-halved"></i>
-                    )}
-                  </div>
-                  <div className="p-4">
-                    <h1 className="text-white uppercase text-xl ">
-                      {service.name}
-                    </h1>
-                  </div>
+        <div className="w-full">
+          <i
+            className={`${icon} text-[2.7rem] lg:text-6xl xl:text-8xl mb-2
+            lg:mb-4
+            xl:mb-6
+            `}
+          ></i>
+          <CustomP styles="uppercase text-[1rem] lg:text-[1.5rem] xl:text-[2rem]">
+            {name}
+          </CustomP>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Servicios() {
+  return (
+    <div
+      className="bg-gradient-to-b from-beige to-darkblue-500 py-10
+    "
+    >
+      <CustomH2
+        styles="text-center text-orange-500 mb-3
+      "
+      >
+        Servicios
+      </CustomH2>
+      <Container>
+        <CustomP
+          styles="text-center
+        md:mb-4
+        lg:mb-5
+        xl:mb-8
+        "
+        >
+          &#161;Decide reservar o programar tu servicio segun tu conveniencia y
+          la opcion de pago que prefieras!
+        </CustomP>
+        <div className="servicios mb-5">
+          <Swiper
+            slidesPerView={window.innerWidth < 800 ? 2 : 3}
+            centeredSlides={false}
+            spaceBetween={window.innerWidth < 800 ? 20 : 60}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {services.map((service, id) => (
+              <SwiperSlide>
+                <div
+                  className="
+                  h-full
+                  w-ful
+                  flex
+                  items-center
+                  justify-center
+              "
+                >
+                  {id % 2 === 0 ? (
+                    <Form name={service.name} icon={service.icon} first />
+                  ) : (
+                    <Form name={service.name} icon={service.icon} second />
+                  )}
                 </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="flex justify-center">
+          <CustomButton
+            styles={"text-white"}
+            isLink
+            link={`${WEBSITE_URL}/app/reservar`}
+            orange
+          >
+            Descubre m&aacute;s
+          </CustomButton>
+        </div>
+      </Container>
     </div>
   );
 }

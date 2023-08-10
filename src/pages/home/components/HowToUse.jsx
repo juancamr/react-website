@@ -1,5 +1,6 @@
 import Container from "../../../components/Container";
 import CustomP from "../../../components/custom/CustomP";
+import CustomH2 from "../../../components/custom/CustomH2";
 
 const elements = [
   {
@@ -30,7 +31,8 @@ function Card({ icon, text }) {
         items-center
         justify-center
         border
-        border-gray-400
+        border-gray-200
+        shadow-lg
         "
     >
       <div>
@@ -44,6 +46,15 @@ function Card({ icon, text }) {
 export default function HowToUse() {
   return (
     <Container>
+      <CustomH2
+        styles="text-center mb-5 text-darkblue-500
+      md:mb-6
+      lg:mb-7
+      xl:mb-10
+      "
+      >
+        Encuentra al experto ideal para ti
+      </CustomH2>
       <div
         className="grid
       md:grid-cols-2

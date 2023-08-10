@@ -6,14 +6,14 @@ export default function CustomH2({ styles, children }) {
     ${styles}
 
     // default
-    text-4xl
-    font-medium
+    text-3xl
+    font-bold
 
-    lg:text-5xl
+    lg:text-4xl
 
 `}
     >
-      <slot />
+      {children}
     </h2>
   );
 }
