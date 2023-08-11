@@ -1,38 +1,23 @@
 import React, { useEffect } from "react";
-import Comments from "../../components/comments/Comments";
-import { usersComments } from "../../common/constants";
-import Banner from "./components/Banner";
-import Slogan from "./components/Slogan";
-import Instructions from "./components/InstructionCard";
-import Download from "../../components/Download";
-import Newsletter from "../../components/Newsletter";
 import SloganUser from "./components/SloganUser";
 import HowToUse from "./components/HowToUse";
 import Servicios from "./components/Servicios";
 import Users from "./components/Users";
-import CustomComments from "./components/CustomComments";
-import Testing from './components/Testing'
+import UserComments from "./components/UserComments";
+import BottomContainer from "./components/BottomContainer";
+import MainContainer from "../../components/MainContainer";
 
 const Home = () => {
   useEffect(() => {});
   return (
-    <main
-      className="pt-20 lg:pt-28 space-y-10
-      lg:space-y-12
-      md:space-y-14
-      xl:space-y-20
-     bg-beige
-     "
-    >
+    <MainContainer beige>
       <SloganUser />
       <HowToUse />
-      <div>
-        <Servicios />
-        <Users />
-        <CustomComments />
-      </div>
-      <Testing/>
-    </main>
+      <Servicios />
+      <Users />
+      <UserComments />
+      <BottomContainer />
+    </MainContainer>
   );
 };
 

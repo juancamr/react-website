@@ -19,7 +19,7 @@ export default function CustomButton({
 
     <!-- custom -->
     ${primary && "bg-blue-500 hover:bg-blue-600"}
-    ${orange && "bg-orange-500 hover:bg-orange-600"}
+    ${orange && "bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600"}
     ${secondary && "border-darkblue-500 hover:bg-darkblue-500 hover:text-white"}
     ${white && "bg-white text-blue-500 hover:bg-blue-500 hover:text-white"}
 

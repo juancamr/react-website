@@ -1,4 +1,3 @@
-import RequisitosIcon from "../../../components/images/RequisitosIcon";
 import Heading from "../../../components/text/Heading";
 import Paragraph from "../../../components/text/Paragraph";
 import PlanesReclutamiento from "./PlanesReclutamiento";

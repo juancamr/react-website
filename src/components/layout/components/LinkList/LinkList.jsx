@@ -5,6 +5,7 @@ import Link from "../Link/Link";
 import "./LinkList.css";
 
 const LinkList = () => {
+  console.log(window.location.pathname);
   useEffect(() => {
     // const navbar = document.querySelector("#navbar");
     // const links = document.querySelectorAll("#navbar a");
@@ -32,10 +33,15 @@ const LinkList = () => {
   return (
     <nav
       id="navbar"
-      className="navbar py-3 flex items-center justify-center lg:space-x-20 xl:space-x-40 2x:space-x-60
-        transition-all bg-beige
+      className={`navbar z-40 py-3 flex items-center justify-center lg:space-x-20 xl:space-x-40 2x:space-x-60
+        transition-all
+        ${window.location.pathname === "/" && "bg-beige"}
+        ${window.location.pathname === "/provider" && "bg-bluepastel"}
+        ${window.location.pathname === "/empresas" && "bg-white"}
+        ${window.location.pathname === "/preguntas" && "bg-beige"}
+        ${window.location.pathname === "/nosotros" && "bg-bluepastel"}
         fixed z-20 w-full
-    "
+    `}
     >
       <a href="/">
         <img src="assets/images/logo-tiims.png" className="h-14 w-40" alt="" />

@@ -25,27 +25,30 @@ const Comments = ({ comments, color }) => {
           return (
             <div key={comment.name}>
               <SwiperSlide>
-                <div className={`p-5 sm:p-8 md:p-8 lg:p-14 space-y-4 backdrop-blur-md
-                ${color === 'blue' && 'bg-blue-900/95'}
-                ${color === 'orange' && 'bg-orange-600/95'}
-                ${color === 'black' && 'bg-gray-900/95'}
-                h-full w-full`}>
+                <div
+                  className={`p-5 sm:p-8 md:p-8 lg:p-14 space-y-4 backdrop-blur-md
+                ${color === "blue" && "bg-blue-900/95"}
+                ${color === "orange" && "bg-orange-600/95"}
+                ${color === "black" && "bg-gray-900/95"}
+                h-full w-full`}
+                >
                   <img
                     className="rounded-full w-36 h-36 object-cover mx-auto"
                     src={comment.photo}
                     alt="profile"
                   />
-                  <h1 className="text-slate-50 text-center">{comment.name}</h1>
-                  <p className="text-justify text-xl font-light">
-                    {comment.comment}
+                  <p className="text-center text-base lg:text-xl font-light">
+                    "{comment.comment}"
                   </p>
+                  <h1 className="text-slate-50 text-center">{comment.name}</h1>
                   <div className="flex items-center justify-center space-x-1">
-                    {[...Array(comment.rate)].map((e, i) => (
+                    {[...Array(comment.rate)].map(() => (
                       <StarIcon isActive={true} />
                     ))}
-                    {grayStars != 0 && [...Array(grayStars)].map((e, i) => (
-                      <StarIcon isActive={false} />
-                    ))}
+                    {grayStars != 0 &&
+                      [...Array(grayStars)].map(() => (
+                        <StarIcon isActive={false} />
+                      ))}
                   </div>
                 </div>
               </SwiperSlide>

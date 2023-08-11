@@ -4,25 +4,24 @@ import {
   LINK_ESPECIALISTA_GOOGLE_PLAY,
 } from "../common/constants";
 
-export default function Download({ users, heading, subHeading }) {
+export default function Download({ users, heading, subHeading, isBlack }) {
   return (
     <div
-      className="absolute
-        top-1/2
-          w-3/4
-          lg:w-1/2
-        left-1/2
-        -translate-x-1/2
-        -translate-y-1/2 backdrop-blur-md bg-black/30
-        text-white
+      className={`
+      ${
+        isBlack
+          ? "bg-gradient-to-tl from-darkblue-600 to-darkblue-800 text-white"
+          : "bg-white text-gray-800"
+      }
         p-6 md:p-10 xl:p-20
-        rounded-xl
-        "
+        shadow-xl
+        border border-gray-200
+        rounded-3xl
+        `}
     >
       <h1
         className="
         text-center
-        text-white-500
         font-bold
         text-3xl
         md:text-4xl
@@ -34,9 +33,7 @@ export default function Download({ users, heading, subHeading }) {
       >
         {heading}
       </h1>
-      <p className="text-white text-center text-xl md:text-2xl mb-6 ">
-        {subHeading}
-      </p>
+      <p className=" text-center text-xl md:text-2xl mb-6 ">{subHeading}</p>
       <div className="flex justify-center mb-3">
         <a
           href={users ? LINK_USER_GOOGLE_PLAY : LINK_ESPECIALISTA_GOOGLE_PLAY}

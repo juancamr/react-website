@@ -1,13 +1,12 @@
 import Container from "../../../components/Container";
 import CustomP from "../../../components/custom/CustomP";
 import CustomH2 from "../../../components/custom/CustomH2";
-import { home } from "../../../common/content";
+import { especialistas } from "../../../common/content";
 import Card from "../../../components/Card";
 
-const { howToUse } = home;
-const { steps, title } = howToUse;
+const { title, methods } = especialistas.payment;
 
-export default function HowToUse() {
+export default function Payment() {
   return (
     <Container>
       <CustomH2
@@ -26,7 +25,7 @@ export default function HowToUse() {
       gap-5
       "
       >
-        {steps.map((element, index) => (
+        {methods.map((element, index) => (
           <Card key={index} icon={element.icon} text={element.paragraph} />
         ))}
       </div>

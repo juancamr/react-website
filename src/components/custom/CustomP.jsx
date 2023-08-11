@@ -7,6 +7,7 @@ export default function CustomP({ styles, children }) {
 
     // default
     text-lg
+    
 
     lg:text-xl
 

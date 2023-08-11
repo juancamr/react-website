@@ -1,7 +1,6 @@
 import Heading from "../../../components/text/Heading";
 import Paragraph from "../../../components/text/Paragraph";
 import Paquetes from "./Paquetes";
-import RequisitosIcon from "../../../components/images/RequisitosIcon";
 
 function HeadingSection() {
   return (

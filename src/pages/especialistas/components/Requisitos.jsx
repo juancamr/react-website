@@ -1,55 +1,53 @@
+import Container from "../../../components/Container";
 import Heading from "../../../components/text/Heading";
 import Paragraph from "../../../components/text/Paragraph";
+import { especialistas } from "../../../common/content";
+import CustomH2 from "../../../components/custom/CustomH2";
+import CustomP from "../../../components/custom/CustomP";
 
 export default function Requisitos() {
-  const requisitos = [
-    // "Descarga la app y completa tus datos personales.",
-    "Sube una imagen que muestre tu DNI por ambos lados.",
-    "Sube tu Certificado Único Laboral CertiJoven o CertiAdulto según sea el caso",
-    "Sube tu recibo de luz o agua.",
-    "Carga tu CV actualizado (opcional) *",
-  ];
+  const { title, paragraph, titleRequirements, requirements } =
+    especialistas.requirements;
   return (
-    <div className="px-4">
-      <Heading
-        className="
+    <Container>
+      <CustomH2
+        styles="
       text-blue-700 
       dark:text-blue-500
       text-left
       md:text-center 
-      leading-9
-      mb-4"
+      mb-2"
       >
-        S&eacute; parte de la comunidad de especialistas
-      </Heading>
-      <Paragraph
-        className="
+        {title}
+      </CustomH2>
+      <CustomP
+        styles="
       text-gray-800  
       dark:text-white 
       md:text-center
       mb-5 
       lg:mb-10"
       >
-        Para registrarte como especialista
-      </Paragraph>
+        {paragraph}
+      </CustomP>
       <div className="grid lg:grid-cols-5 gap-4 lg:px-20 2xl:px-40">
         <div className=" flex items-center lg:col-span-3">
           <div>
-            <Heading
-              className="
+            <CustomH2
+              styles="
             lg:px-5
             mb-3  
             text-orange-400"
             >
-              Documentaci&oacute;n
-            </Heading>
+              {titleRequirements}
+            </CustomH2>
             <div className="text-slate-800 dark:text-white lg:px-5">
               <ul className="space-y-5">
-                {requisitos.map((requisito, index) => (
+                {requirements.map((requisito, index) => (
                   <li key={index}>
-                    <Paragraph className="font-light">
+                    <CustomP styles="font-light text-gray-800">
                       {index + 1}. {requisito}
-                    </Paragraph>
+                    </CustomP>
                   </li>
                 ))}
               </ul>
@@ -67,6 +65,6 @@ export default function Requisitos() {
           </div> */}
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

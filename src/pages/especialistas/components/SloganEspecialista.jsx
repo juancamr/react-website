@@ -1,16 +1,15 @@
+import SloganContainer from "../../../components/SloganContainer";
+import { especialistas } from "../../../common/content";
 import CustomH1 from "../../../components/custom/CustomH1";
 import CustomP from "../../../components/custom/CustomP";
+import { LINK_ESPECIALISTA_GOOGLE_PLAY } from "../../../common/constants";
 import CustomButton from "../../../components/custom/CustomButton";
-import { LINK_USER_GOOGLE_PLAY, WEBSITE_URL } from "../../../common/constants";
-import { home } from "../../../common/content";
-import SloganContainer from "../../../components/SloganContainer";
 
-export default function SloganUser() {
-  const { topContainer } = home;
-  const { title, paragraph, downloadButton, reservaButton, image } =
-    topContainer;
+const SloganEspecialista = () => {
+  const { topContainer } = especialistas;
+  const { title, paragraph, downloadButton, image } = topContainer;
   return (
-    <SloganContainer orange>
+    <SloganContainer blue>
       <section
         className="p-5
           pr-0
@@ -27,20 +26,15 @@ export default function SloganUser() {
       >
         <div>
           <CustomH1 styles={"text-white mb-5"}>{title}</CustomH1>
-          <CustomP styles={"text-slate-200 mb-8"}>{paragraph}</CustomP>
+          <CustomP styles={"text-slate-200 mb-8 xl:mb-10"}>{paragraph}</CustomP>
           <div className="lg:mb-9 xl:mb-10">
             <CustomButton
               isLink
-              link={LINK_USER_GOOGLE_PLAY}
+              link={LINK_ESPECIALISTA_GOOGLE_PLAY}
               styles={"mb-5"}
               white
             >
               {downloadButton} <i class="fa-brands fa-google-play ml-2"></i>
-            </CustomButton>
-          </div>
-          <div className="hidden lg:block">
-            <CustomButton isLink link={`${WEBSITE_URL}/app/reservar`} white>
-              {reservaButton} <i class="fa-solid fa-globe ml-2"></i>
             </CustomButton>
           </div>
         </div>
@@ -60,4 +54,6 @@ export default function SloganUser() {
       </section>
     </SloganContainer>
   );
-}
+};
+
+export default SloganEspecialista;

@@ -16,34 +16,6 @@ export const LINK_ESPECIALISTA_GOOGLE_PLAY =
   "https://play.google.com/store/apps/details?id=com.tiims.provider&hl=es_UY";
 export const LINK_COMPANY = "https://company.tiims.com.pe/login";
 
-export const usersComments = [
-  {
-    name: "Juan Carlos",
-    photo: "https://randomuser.me/api/portraits/women/66.jpg",
-    comment:
-      "Holauoaeu aouauaou aoeuoa aoeu aou  aoeuouaoeu a oeua oeu aoeu aoeu ",
-    rate: 5,
-  },
-  {
-    name: "Juan Carlos",
-    photo: "https://randomuser.me/api/portraits/men/60.jpg",
-    comment: "Hola la verdad es que me parece una mrd",
-    rate: 5,
-  },
-  {
-    name: "Juan Carlos",
-    photo: "https://randomuser.me/api/portraits/men/62.jpg",
-    comment: "Hola asnteuhsnao aoestnhuoau aeuaouaou aoeuaou oaeu ",
-    rate: 5,
-  },
-  {
-    name: "Juan Carlos",
-    photo: "https://randomuser.me/api/portraits/men/46.jpg",
-    comment: "santoehutsno hasnotehu tnao uhnatohe usntaoheu ntshaoeu",
-    rate: 5,
-  },
-];
-
 export const especialistasComments = [
   {
     name: "Juan Carlos",
