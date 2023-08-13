@@ -29,7 +29,7 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
   };
   return (
     <section className="px-4">
-      <CustomH2 styles="text-center mb-8 text-gray-600">
+      <CustomH2 styles="text-center mb-8 text-darkorange-600">
         &#191;Preguntas? Aqu&iacute; te ayudamos
       </CustomH2>
       <div className={`${styles}`}>

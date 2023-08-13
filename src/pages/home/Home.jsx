@@ -8,7 +8,6 @@ import BottomContainer from "./components/BottomContainer";
 import MainContainer from "../../components/MainContainer";
 
 const Home = () => {
-  useEffect(() => {});
   return (
     <MainContainer beige>
       <SloganUser />

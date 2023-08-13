@@ -56,7 +56,9 @@ function ImageEspecialista({ hidden }) {
               object-cover
               rounded-b-xl
               md:rounded-none
-              md:rounded-r-[50px]
+              md:rounded-r-xl
+              lg:rounded-none
+              lg:rounded-r-[50px]
               ${
                 hidden
                   ? "hidden md:block"

@@ -13,7 +13,6 @@ export default function Requisitos() {
       <CustomH2
         styles="
       text-blue-700 
-      dark:text-blue-500
       text-left
       md:text-center 
       mb-2"
@@ -23,7 +22,6 @@ export default function Requisitos() {
       <CustomP
         styles="
       text-gray-800  
-      dark:text-white 
       md:text-center
       mb-5 
       lg:mb-10"
@@ -41,7 +39,7 @@ export default function Requisitos() {
             >
               {titleRequirements}
             </CustomH2>
-            <div className="text-slate-800 dark:text-white lg:px-5">
+            <div className="text-slate-800 lg:px-5">
               <ul className="space-y-5">
                 {requirements.map((requisito, index) => (
                   <li key={index}>

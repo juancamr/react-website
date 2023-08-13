@@ -11,11 +11,10 @@ const Top = () => {
   return (
     <SloganContainer isCompany>
       <div className="relative h-[600px] md:h-[500px] lg:h-[600px] xl:h-full w-full">
-        <div className="absolute top-0 left-0 md:w-1/2 p-6 z-20">
+        <div className="absolute top-0 left-0 md:w-1/2 p-4 lg:p-6 z-20">
           <h1
             className="text-darkblue-500 mb-2 lg:mb-6 font-extrabold
-          text-[1.40rem]
-          lg:text-3xl
+            text-4xl
           xl:text-5xl
           2xl:text-6xl
           "
@@ -41,7 +40,7 @@ const Top = () => {
         <div
           className="bg-gradient-to-tl from-darkblue-600 to-white
             absolute bottom-0 w-full rounded-[50px]
-            py-10 h-[300px]"
+            py-10 h-[200px] lg:h-[300px]"
         />
         <img
           className="

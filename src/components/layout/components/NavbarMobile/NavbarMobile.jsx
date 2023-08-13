@@ -37,8 +37,8 @@ export default function NavbarMobile() {
           <span></span>
         </label>
         <label for="active" class="close"></label>
-        <div class="wrapper">
-          <ul>
+        <div class="wrapper bg-beige">
+          <ul className="text-gray-800">
             <li>
               <a href="/">Inicio</a>
             </li>

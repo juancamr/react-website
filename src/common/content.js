@@ -145,11 +145,68 @@ export const especialistas = {
 
 export const company = {
   topContainer: {
-    title: 'Encuentra a tu colaborador ideal en 24 horas*',
-    paragraph: 'Aliquip in Lorem eiusmod officia deserunt dolore enim esse ut sit est incididunt.',
-    downloadButton: 'holamnudo'
+    title: "Encuentra a tu colaborador ideal en 24 horas*",
+    paragraph:
+      "Aliquip in Lorem eiusmod officia deserunt dolore enim esse ut sit est incididunt.",
+    downloadButton: "holamnudo",
   },
   mapa: {
     title: "Nuestras alianzas en reclutamiento",
   },
+};
+
+export const aboutUs = {
+  whatWeDo: {
+    title: "Eiusmod incididunt laborum irure incididunt incididunt consectetur",
+    paragraph:
+      "Et magna amet irure magna excepteur proident amet tempor aliqua quis fugiat aute. Qui ullamco fugiat sint mollit adipisicing veniam ut velit enim. Laboris aliqua Lorem culpa reprehenderit esse eiusmod aute tempor culpa cupidatat. Sint reprehenderit culpa dolore dolore aliqua sit dolore ut eiusmod ad anim. Mollit ad labore esse et magna aliquip irure consequat. Aliqua commodo est ut nisi mollit laborum incididunt culpa. Duis eu elit reprehenderit irure dolor aliquip qui irure Lorem qui ea commodo eu pariatur.",
+    paragraphs: [
+      "Amet veniam amet qui dolor commodo ullamco adipisicing aute laborum excepteur. Deserunt proident incididunt ex non aute adipisicing sit exercitation aute fugiat excepteur dolor. Esse incididunt officia voluptate qui dolore excepteur anim qui eiusmod aliquip aute.",
+      "Amet veniam amet qui dolor commodo ullamco adipisicing aute laborum excepteur. Deserunt proident incididunt ex non aute adipisicing sit exercitation aute fugiat excepteur dolor. Esse incididunt officia voluptate qui dolore excepteur anim qui eiusmod aliquip aute.",
+      "Amet veniam amet qui dolor commodo ullamco adipisicing aute laborum excepteur. Deserunt proident incididunt ex non aute adipisicing sit exercitation aute fugiat excepteur dolor. Esse incididunt officia voluptate qui dolore excepteur anim qui eiusmod aliquip aute.",
+    ],
+  },
+  middleContainer: {
+    title:
+      "Et sit magna laboris nisi exercitation minim cillum deserunt duis reprehenderit do aliqua deserunt.",
+    paragraph:
+      "Adipisicing duis tempor irure sunt minim minim minim labore exercitation laborum dolor. Eiusmod ad ad tempor veniam qui pariatur elit esse id sit in elit do. Ex enim deserunt aliquip dolore. Do qui ullamco anim nulla fugiat incididunt adipisicing.",
+  },
+  ourSpecialization: {
+    title: "stnaehusntah aoeu",
+    slogan: "sateuhs ",
+    paragraph:
+      "Esse sit Lorem anim nostrud. Do ea minim velit nisi dolor aliquip non nulla dolore. Enim dolore consequat voluptate excepteur anim tempor laboris incididunt enim eu esse.",
+  },
+  mission: [
+    {
+      icon: "fa-solid fa-building-flag",
+      name: "mision",
+      paragraph:
+        "Fugiat velit occaecat consectetur fugiat eiusmod excepteur incididunt id adipisicing sint. Culpa non minim culpa in occaecat incididunt sunt dolore non ipsum sunt eu ea. Proident minim dolore aliqua incididunt aute do. Cupidatat est nisi ipsum nulla pariatur anim culpa sunt aliquip.",
+    },
+    {
+      icon: "fa-solid fa-eye",
+      name: "vision",
+      paragraph:
+        "Fugiat velit occaecat consectetur fugiat eiusmod excepteur incididunt id adipisicing sint. Culpa non minim culpa in occaecat incididunt sunt dolore non ipsum sunt eu ea. Proident minim dolore aliqua incididunt aute do. Cupidatat est nisi ipsum nulla pariatur anim culpa sunt aliquip.",
+    },
+  ],
+
+  ownersComments: [
+    {
+      photo: "https://randomuser.me/api/portraits/men/31.jpg",
+      comment:
+        "Aliqua exercitation non culpa in. Anim pariatur veniam ea mollit. Ut exercitation aute reprehenderit veniam Lorem occaecat deserunt nulla ad officia. Labore velit minim Lorem tempor laborum veniam incididunt excepteur consectetur do dolore. Pariatur amet aliquip magna dolor nulla proident incididunt commodo non aute dolore. Irure incididunt incididunt adipisicing ",
+      name: "nastoehu asn",
+      cargo: "nsaoehu nsatoueo",
+    },
+    {
+      photo: "https://randomuser.me/api/portraits/men/35.jpg",
+      comment:
+        "Aliqua exercitation non culpa in. Anim pariatur veniam ea mollit. Ut exercitation aute reprehenderit veniam Lorem occaecat deserunt nulla ad officia. Labore velit minim Lorem tempor laborum veniam incididunt excepteur consectetur do dolore. Pariatur amet aliquip magna dolor nulla proident incididunt commodo non aute dolore. Irure incididunt incididunt ",
+      name: "nastoehu asn",
+      cargo: "nsaoehu nsatoueo",
+    },
+  ],
 };

@@ -33,7 +33,6 @@ const Header = () => {
       <a
         className="
         text-center backdrop-blur-md bg-white/80
-        dark:bg-black/50
       h-12 w-12
       fixed bottom-0
       right-0
@@ -44,10 +43,8 @@ const Header = () => {
       font-bold
       shadow-xl
       border border-gray-200
-      dark:border-gray-800
       mb-4
       text-black
-      dark:text-slate-50
       py-3
         "
         href="#header"

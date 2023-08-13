@@ -39,7 +39,7 @@ const LinkList = () => {
         ${window.location.pathname === "/provider" && "bg-bluepastel"}
         ${window.location.pathname === "/empresas" && "bg-white"}
         ${window.location.pathname === "/preguntas" && "bg-beige"}
-        ${window.location.pathname === "/nosotros" && "bg-bluepastel"}
+        ${window.location.pathname === "/nosotros" && "bg-beige"}
         fixed z-20 w-full
     `}
     >

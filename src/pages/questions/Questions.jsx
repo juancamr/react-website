@@ -12,9 +12,18 @@ const Questions = () => {
   });
   return (
     <MainContainer beige>
-      <div className="md:w-1/2 mx-auto">
-        <Qa questions={questions} />
-      </div>
+      <Container>
+        <div className="min-h-screen grid lg:grid-cols-2 gap-5">
+          <Qa questions={questions} />
+          <div>
+            <img
+              className="h-[800px] object-cover w-full"
+              src="assets/images/update/questions.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </Container>
     </MainContainer>
   );
 };

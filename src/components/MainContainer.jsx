@@ -6,6 +6,7 @@ const MainContainer = ({ children, beige, blue }) => {
       space-y-14
       xl:space-y-20
       ${beige ? "bg-beige" : blue ? "bg-bluepastel" : "bg-white"}
+      text-gray-800
       `}
     >
       {children}

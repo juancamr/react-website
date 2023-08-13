@@ -6,7 +6,7 @@ const FooterSection = ({ data, socialData, contact }) => {
   const { name, links } = data;
   return (
     <div className="footer-col">
-      <h4 className="text-gray-800 dark:text-slate-50">{name}</h4>
+      <h4 className="text-gray-800 ">{name}</h4>
       <ul>
         {socialData ? (
           <div className="social-links">
@@ -15,7 +15,7 @@ const FooterSection = ({ data, socialData, contact }) => {
             ))}
           </div>
         ) : contact ? (
-          <div className="dark:text-gray-400 text-gray-600">
+          <div className="text-gray-600">
             <p className="mb-3">{data.content.direction}</p>
             <p>{data.content.numberPhone}</p>
           </div>

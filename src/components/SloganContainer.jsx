@@ -18,6 +18,7 @@ const SloganContainer = ({ children, blue, orange, isCompany, styles }) => {
         }
         ${!isCompany && "grid md:grid-cols-2 gap-10"}
         xl:h-[700px]
+        2xl:h-[780px]
         `}
       >
         {children}

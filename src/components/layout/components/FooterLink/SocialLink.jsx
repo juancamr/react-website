@@ -4,7 +4,7 @@ const SocialLink = ({ icon, path }) => {
   return (
     <a
       target="_blank"
-      className="dark:bg-gray-600 dark:text-white dark:hover:text-gray-800 dark:hover:bg-slate-50
+      className=" dark:hover:text-gray-800 
       bg-gray-600 hover:bg-gray-800 text-white
       "
       href={path}
