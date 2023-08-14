@@ -20,7 +20,7 @@ const Planes = () => {
       <div className="grid xl:grid-cols-2 gap-5">
         <section className="flex items-end">
           <div className="w-full">
-            <h2 className="mb-8 text-darkblue-500 text-5xl font-bold">
+            <h2 className="mb-8 text-darkblue-500 text-3xl md:text-4xl xl:text-5xl font-bold">
               Tarifas de reclutamiento
             </h2>
             <div className="grid md:grid-cols-2 gap-5">

@@ -7,10 +7,32 @@ const UserComments = () => {
   return (
     <Container>
       <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-20">
+        <div className="lg:hidden">
+          <div className="lg:col-span-3 flex items-center ">
+            <div>
+              <h2
+                className="
+            text-3xl text-gray-700 text-center  font-bold mb-2
+            md:text-left md:text-4xl md:mb-4
+            lg:text-5xl
+          "
+              >
+                {userCommentsSection.title}
+              </h2>
+              <p
+                className="text-base text-gray-600 font-light text-center
+            md:text-left md:text-xl
+          "
+              >
+                {userCommentsSection.paragraph}
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="lg:col-span-2">
           <Comments comments={userCommentsSection.comments} color="orange" />
         </div>
-        <div className="lg:col-span-3 flex items-center">
+        <div className="hidden lg:flex lg:col-span-3 items-center">
           <div>
             <h2
               className="

@@ -9,20 +9,24 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
   const [questionsList, setQuestions] = useState(questions);
   const [error, setError] = useState("");
 
+  const actualQuestions = (value) => {
+    setQuestions(
+      questionsList.filter((questionItem) => {
+        return quitarTildes(questionItem.question.toLowerCase()).includes(
+          quitarTildes(value.toLowerCase())
+        );
+      })
+    );
+  };
+
   const onChangeEvent = (event) => {
     const { value } = event.target;
     setSearch(value);
+    setQuestions(questions);
     if (value === "") {
-      setQuestions(questions);
       setError("");
     } else {
-      setQuestions(
-        questionsList.filter((questionItem) => {
-          return quitarTildes(questionItem.question.toLowerCase()).includes(
-            quitarTildes(value.toLowerCase())
-          );
-        })
-      );
+      actualQuestions(value);
       if (questionsList.length === 0) {
         setError(`No se encontraron resultados para "${value}"`);
       }

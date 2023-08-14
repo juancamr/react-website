@@ -8,7 +8,7 @@ const TopContainer = () => {
     <Container>
       <div className="relative lg:grid lg:grid-cols-2 lg:gap-10">
         <section
-          className="absolute top-0 left-0 h-full flex items-center z-10
+          className="absolute top-0 left-0 h-full flex items-end pb-4 lg:pb-0 lg:items-center z-10
           lg:relative
           "
         >

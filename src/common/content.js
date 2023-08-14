@@ -20,7 +20,7 @@ export const home = {
       },
       {
         icon: "assets/images/update/programalo.png",
-        paragraph: "Programalo",
+        paragraph: "Prográmalo",
       },
       {
         icon: "assets/images/update/paga.png",
@@ -43,18 +43,18 @@ export const home = {
       },
       {
         icon: "fa-solid fa-tooth",
-        name: "Odontologia",
+        name: "Odontología",
       },
       {
         icon: "fa-solid fa-person",
         name: "Conserje",
       },
     ],
-    button: "Descubre mas",
+    button: "Descubre más",
   },
   users: {
     title:
-      "¿Estas preparado para descubrir una APP que te facilitará el día a día?",
+      "¿Estás preparado para descubrir una APP que te facilitará el día a día?",
     paragraph:
       "Miles de peruanos estan solicitando a sus especialistas, tu no te quedes atrás",
   },
@@ -64,8 +64,8 @@ export const home = {
       "Algunos de los muchos de nuestros clientes estan felices con el actual servicio",
     comments: [
       {
-        name: "Random",
-        photo: "https://randomuser.me/api/portraits/women/66.jpg",
+        name: "Anónimo",
+        photo: "https://cdn-icons-png.flaticon.com/512/219/219969.png",
         comment: "Me parecio una excelente idea, me ahorra muchísimo tiempo.",
         rate: 4,
       },
@@ -194,13 +194,13 @@ export const aboutUs = {
   mission: [
     {
       icon: "fa-solid fa-building-flag",
-      name: "mision",
+      name: "misión",
       paragraph:
         "Nuestra misión en Tiims es brindar una plataforma innovadora que conecta a individuos con servicios esenciales y oportunidades laborales. Nos esforzamos por simplificar la vida cotidiana al fomentar conexiones confiables y flexibles entre clientes y especialistas.",
     },
     {
       icon: "fa-solid fa-eye",
-      name: "vision",
+      name: "visión",
       paragraph:
         "En Tiims, aspiramos a ser la primera elección para quienes buscan soluciones y oportunidades en servicios esenciales. Buscamos crear una comunidad de confianza donde las personas puedan colaborar y prosperar, impulsados por la conveniencia y la calidad.",
     },

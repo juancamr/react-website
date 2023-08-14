@@ -15,11 +15,11 @@ export default function Servicios() {
   const { services } = home;
   const { serviceList, title, paragraph, button } = services;
   return (
-    <Container>
-      <div
-        className="py-10
+    <div
+      className="py-10
     "
-      >
+    >
+      <div className="px-4">
         <CustomH2
           styles="text-center text-orange-500 mb-3
       "
@@ -36,49 +36,55 @@ export default function Servicios() {
         >
           {paragraph}
         </CustomP>
-        <div className="servicios mb-5">
-          <Swiper
-            slidesPerView={window.innerWidth < 800 ? 2 : 3}
-            centeredSlides={window.innerHeight < 800 ? true : false}
-            spaceBetween={window.innerWidth < 800 ? 20 : 60}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
-          >
-            {serviceList.map((service, id) => (
-              <SwiperSlide>
-                <div
-                  className="
+      </div>
+      <div
+        className="servicios mb-5
+      lg:px-20
+      xl:px-28
+      2xl:px-40
+       "
+      >
+        <Swiper
+          slidesPerView={window.innerWidth < 800 ? 2 : 3}
+          centeredSlides={window.innerHeight < 800 ? true : false}
+          spaceBetween={window.innerWidth < 800 ? 20 : 60}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {serviceList.map((service, id) => (
+            <SwiperSlide>
+              <div
+                className="
                   h-full
                   w-ful
                   flex
                   items-center
                   justify-center
               "
-                >
-                  {id % 2 === 0 ? (
-                    <Form name={service.name} icon={service.icon} first />
-                  ) : (
-                    <Form name={service.name} icon={service.icon} second />
-                  )}
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-        <div className="flex justify-center">
-          <CustomButton
-            styles={"text-white"}
-            isLink
-            link={`${WEBSITE_URL}/app/reservar`}
-            orange
-          >
-            {button}
-          </CustomButton>
-        </div>
-        {/* </Container> */}
+              >
+                {id % 2 === 0 ? (
+                  <Form name={service.name} icon={service.icon} first />
+                ) : (
+                  <Form name={service.name} icon={service.icon} second />
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </Container>
+      <div className="flex justify-center">
+        <CustomButton
+          styles={"text-white"}
+          isLink
+          link={`${WEBSITE_URL}/app/reservar`}
+          orange
+        >
+          {button}
+        </CustomButton>
+      </div>
+      {/* </Container> */}
+    </div>
   );
 }
 

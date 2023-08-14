@@ -19,7 +19,7 @@ export default function () {
       .then((response) => {
         if (response.success) {
           setOpen(true);
-          input.current.value = "";
+          input.current.value = ""
         }
       });
   };
@@ -28,6 +28,7 @@ export default function () {
     event.preventDefault();
     if (input.current.value != "") {
       setOpen(true);
+      input.current.value = ""
     }
   };
 
@@ -57,7 +58,7 @@ export default function () {
           className="grid grid-cols-5 gap-x-2 lg:w-1/2 xl:w-96 mx-auto"
         >
           <input
-            className="rounded-3xl border border-gray-200 shadow-xl
+            className="rounded-xl border border-gray-200 shadow-xl
           col-span-3
         text-lg px-4 py-2
         text-gray-800
@@ -70,7 +71,7 @@ export default function () {
             className="bg-orange-400
           hover:bg-orange-500
           shadow-xl
-        rounded-3xl px-3 col-span-2
+        rounded-xl px-3 col-span-2
         text-base lg:text-xl
         "
           >
@@ -95,7 +96,7 @@ export default function () {
             <Heading className="mb-4">&#161;Suscrito!</Heading>
             <Paragraph>
               Muchas gracias por ser parte de esta gran comunidad,
-              estar&aacute;s al tanto de nuestras nuevas actualizaciones
+              estar&aacute;s al tanto de nuestras nuevas actualizaciones y promociones
             </Paragraph>
           </div>
         </Modal>

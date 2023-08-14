@@ -10,7 +10,8 @@ export default function AccordionList({ questions }) {
   return (
     <div>
       {questions.map((question, index) => {
-        if (questions.length === index + 1) {
+        const word = question.answer.slice(-5);
+        if (word.includes("clic")) {
           return (
             <Accordion>
               <AccordionSummary

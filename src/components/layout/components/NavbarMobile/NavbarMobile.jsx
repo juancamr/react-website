@@ -3,7 +3,7 @@ import { routes } from "../../../../common/constants";
 
 export default function NavbarMobile() {
   return (
-    <div className="fixed w-full z-20">
+    <div className="fixed w-full z-40">
       <div
         className="
           rounded-3xl
