@@ -13,7 +13,7 @@ export default function Download({ users, heading, subHeading, isBlack }) {
           ? "bg-gradient-to-tl from-darkblue-600 to-darkblue-800 text-white"
           : "bg-white text-gray-800"
       }
-        p-6 md:p-10 xl:p-20
+        p-4 md:p-10 xl:p-20
         shadow-xl
         border border-gray-200
         rounded-3xl

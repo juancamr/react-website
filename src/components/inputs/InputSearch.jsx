@@ -29,7 +29,7 @@ const InputSearch = ({ placeholder, onClick, value, onChangeEvent }) => {
           onChange={onChangeEvent}
           type="search"
           id="default-search"
-          class="block w-full p-4 pl-10 text-sm lg:text-xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
+          className="block w-full p-4 pl-10 text-sm lg:text-xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "
           placeholder={placeholder}
           value={value}
           required

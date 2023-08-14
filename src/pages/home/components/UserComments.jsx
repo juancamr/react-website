@@ -6,7 +6,10 @@ const UserComments = () => {
   const { userCommentsSection } = home;
   return (
     <Container>
-      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-20">
+        <div className="lg:col-span-2">
+          <Comments comments={userCommentsSection.comments} color="orange" />
+        </div>
         <div className="lg:col-span-3 flex items-center">
           <div>
             <h2
@@ -26,12 +29,6 @@ const UserComments = () => {
               {userCommentsSection.paragraph}
             </p>
           </div>
-        </div>
-        <div className="lg:col-span-2">
-          <Comments
-            comments={userCommentsSection.comments}
-            color="orange"
-          />
         </div>
       </div>
     </Container>

@@ -31,7 +31,7 @@ export const home = {
   services: {
     title: "Servicios",
     paragraph:
-      "¡Decide reservar o programar tu servicio segun tu conveniencia y la opcion de pago que prefieras!",
+      "¡Decide reservar o programar tu servicio segun tu conveniencia y la opción de pago que prefieras!",
     serviceList: [
       {
         icon: "fa-solid fa-broom",
@@ -54,9 +54,9 @@ export const home = {
   },
   users: {
     title:
-      "¿Estas preparado para descubrir una APP que te facilitara el dia a dia?",
+      "¿Estas preparado para descubrir una APP que te facilitará el día a día?",
     paragraph:
-      "Miles de peruanos estan solicitando a sus especialistas, tu no te quedes atras",
+      "Miles de peruanos estan solicitando a sus especialistas, tu no te quedes atrás",
   },
   userCommentsSection: {
     title: "Mira que opinan nuestros clientes",
@@ -64,82 +64,62 @@ export const home = {
       "Algunos de los muchos de nuestros clientes estan felices con el actual servicio",
     comments: [
       {
-        name: "Juan Carlos",
+        name: "Random",
         photo: "https://randomuser.me/api/portraits/women/66.jpg",
-        comment:
-          "Holauoaeu aouauaou aoeuoa aoeu aou  aoeuouaoeu a oeua oeu aoeu aoeu ",
-        rate: 5,
-      },
-      {
-        name: "Juan Carlos",
-        photo: "https://randomuser.me/api/portraits/men/60.jpg",
-        comment: "Hola la verdad es que me parece una mrd",
-        rate: 5,
-      },
-      {
-        name: "Juan Carlos",
-        photo: "https://randomuser.me/api/portraits/men/62.jpg",
-        comment: "Hola asnteuhsnao aoestnhuoau aeuaouaou aoeuaou oaeu ",
-        rate: 5,
-      },
-      {
-        name: "Juan Carlos",
-        photo: "https://randomuser.me/api/portraits/men/46.jpg",
-        comment: "santoehutsno hasnotehu tnao uhnatohe usntaoheu ntshaoeu",
-        rate: 5,
+        comment: "Me parecio una excelente idea, me ahorra muchísimo tiempo.",
+        rate: 4,
       },
     ],
   },
   downloadSection: {
-    headingDownload: "hasneuhtaho etn",
-    paragraphDownload:
-      "Aliqua qui et exercitation consectetur culpa quis velit dolor tempor.",
+    headingDownload: "¿Listo para probar tiims?",
+    paragraphDownload: "Optimiza tu día a día",
   },
 };
 
 export const especialistas = {
   topContainer: {
-    title: "Dolor veniam cupidatat aliqua",
-    paragraph:
-      "Commodo et pariatur minim pariatur ex dolor tempor nulla veniam ullamco cillum nostrud anim voluptate.",
-    downloadButton: "Descargate la app",
+    title: "TRABAJA CON TIIMS",
+    paragraph: "Gana más de S/ 2,400 al mes, trabajando en tus tiempos libres",
+    downloadButton: "Regístrate aquí",
     image: "assets/images/update/especialista_top.webp",
   },
   requirements: {
-    title: "snathoet asteuhao ",
-    paragraph: "Non et eiusmod irure et eu labore ea proident",
-    titleRequirements: "atnseutnau",
+    title: "Sé parte de la comunidad de especialistas",
+    paragraph: "Requisitos para tu registro como especialista",
+    titleRequirements: "Documentación",
     requirements: [
       "Sube una imagen que muestre tu DNI por ambos lados.",
-      "Sube tu Certificado Único Laboral CertiJoven o CertiAdulto según sea el caso",
+      "Sube tu Certificado Único Laboral CertiJoven o CertiAdulto según sea el caso.",
       "Sube tu recibo de luz o agua.",
-      "Carga tu CV actualizado (opcional) *",
+      "Carga tu CV actualizado (opcional)",
+      "Reserva tu cita para pasar el proceso de poligrafía.",
     ],
   },
   payment: {
-    title: "hsnaoethu oaensu ht",
+    title: "Metodos de pago",
     methods: [
       {
         icon: "https://seeklogo.com/images/Y/yape-app-logo-1FD46D1120-seeklogo.com.png",
-        paragraph: "sntahoeu aou",
+        paragraph: "Yape",
       },
       {
         icon: "https://seeklogo.com/images/P/plin-logo-967A4AF583-seeklogo.com.png",
-        paragraph: "sntehau ansote uh",
+        paragraph: "Plin",
       },
       {
         icon: "https://static.vecteezy.com/system/resources/previews/011/660/689/original/3d-money-icon-illustration-png.png",
-        paragraph: "sntehau ansote uh",
+        paragraph: "Efectivo",
       },
       {
         icon: "https://static.vecteezy.com/system/resources/previews/009/338/810/original/3d-illustration-credit-card-png.png",
-        paragraph: "sntehau ansote uh",
+        paragraph: "Cuenta bancaria",
       },
     ],
   },
   downloadSection: {
-    headingDownload: "sehasotnuhsnathoeu",
-    paragraphDownload: "Eu nulla commodo officia labore laborum minim.",
+    headingDownload: "¿Listo para empezar a ganar dinero?",
+    paragraphDownload: "Vuélvete un especialista",
   },
 };
 
@@ -147,66 +127,93 @@ export const company = {
   topContainer: {
     title: "Encuentra a tu colaborador ideal en 24 horas*",
     paragraph:
-      "Aliquip in Lorem eiusmod officia deserunt dolore enim esse ut sit est incididunt.",
-    downloadButton: "holamnudo",
+      "Encarga el riguroso proceso de selección de su personal a Tiims",
+    downloadButton: "Empecemos",
   },
   mapa: {
     title: "Nuestras alianzas en reclutamiento",
+  },
+
+  planes: {
+    90: {
+      name: "Seleccion 90",
+      price: "4820",
+      features: ["Verificación social", "Entrevista preempleo"],
+    },
+    180: {
+      name: "Seleccion 180",
+      price: "4820",
+      features: [
+        "Verificación social",
+        "Entrevista preempleo",
+        "Prueba psicolaboral",
+      ],
+    },
+    360: {
+      name: "Seleccion 360",
+      price: "4820",
+      features: [
+        "Verificación domiciliaria",
+        "Verificación académica",
+        "Verificación laboral",
+        "Verificación crediticia",
+        "Verificación social",
+        "Entrevista psicológica",
+        "Entrevista pre-selección",
+        "Entrevista pre-empleo",
+        "Prueba psicolaboral proyectiva",
+        "Prueba psicolaboral conductual",
+        "Prueba de confiabilidad (poligrafía)",
+      ],
+    },
   },
 };
 
 export const aboutUs = {
   whatWeDo: {
-    title: "Eiusmod incididunt laborum irure incididunt incididunt consectetur",
+    title: "Juntos creamos soluciones",
     paragraph:
-      "Et magna amet irure magna excepteur proident amet tempor aliqua quis fugiat aute. Qui ullamco fugiat sint mollit adipisicing veniam ut velit enim. Laboris aliqua Lorem culpa reprehenderit esse eiusmod aute tempor culpa cupidatat. Sint reprehenderit culpa dolore dolore aliqua sit dolore ut eiusmod ad anim. Mollit ad labore esse et magna aliquip irure consequat. Aliqua commodo est ut nisi mollit laborum incididunt culpa. Duis eu elit reprehenderit irure dolor aliquip qui irure Lorem qui ea commodo eu pariatur.",
+      "Nos unimos como una comunidad en Tiims para abordar desafíos diarios. Desde conectar a jóvenes con servicios esenciales hasta brindar a los especialistas la oportunidad de compartir sus habilidades, colaboramos para construir un entorno donde las soluciones fluyen. Nuestra plataforma es el lienzo donde la innovación y la confianza convergen, creando un impacto significativo en la vida de todos los involucrados. Estos son algunos de nuestros objetivos en nuestros clientes:",
     paragraphs: [
-      "Amet veniam amet qui dolor commodo ullamco adipisicing aute laborum excepteur. Deserunt proident incididunt ex non aute adipisicing sit exercitation aute fugiat excepteur dolor. Esse incididunt officia voluptate qui dolore excepteur anim qui eiusmod aliquip aute.",
-      "Amet veniam amet qui dolor commodo ullamco adipisicing aute laborum excepteur. Deserunt proident incididunt ex non aute adipisicing sit exercitation aute fugiat excepteur dolor. Esse incididunt officia voluptate qui dolore excepteur anim qui eiusmod aliquip aute.",
-      "Amet veniam amet qui dolor commodo ullamco adipisicing aute laborum excepteur. Deserunt proident incididunt ex non aute adipisicing sit exercitation aute fugiat excepteur dolor. Esse incididunt officia voluptate qui dolore excepteur anim qui eiusmod aliquip aute.",
+      "Ayudar con su agenda ocupada. Simplificamos la vida al conectar a los usuarios con servicios esenciales en su horario conveniente, eliminando la preocupación por tareas domésticas y mejorando la calidad de vida.",
+      "Empleo flexible. Ofrecemos a los especialistas la oportunidad de trabajar de acuerdo a sus habilidades y horarios, brindándoles una fuente confiable de ingresos y empoderamiento.",
+      "Seguridad y confianza. Nuestro riguroso proceso de selección y verificación garantiza que los servicios sean proporcionados por especialistas confiables, generando tranquilidad y satisfacción para los usuarios.",
     ],
   },
   middleContainer: {
-    title:
-      "Et sit magna laboris nisi exercitation minim cillum deserunt duis reprehenderit do aliqua deserunt.",
+    title: "Tecnología y Conexiones: Nuestro Modelo de Operación",
     paragraph:
-      "Adipisicing duis tempor irure sunt minim minim minim labore exercitation laborum dolor. Eiusmod ad ad tempor veniam qui pariatur elit esse id sit in elit do. Ex enim deserunt aliquip dolore. Do qui ullamco anim nulla fugiat incididunt adipisicing.",
+      "Nuestro modelo de operación se basa en la sinergia entre personas y tecnología. Proporcionamos una plataforma intuitiva que conecta a usuarios con especialistas confiables y servicios esenciales. Esta interacción fluida y segura impulsa nuestra misión de mejorar la vida cotidiana para todos.",
   },
   ourSpecialization: {
-    title: "stnaehusntah aoeu",
-    slogan: "sateuhs ",
+    title: "Seguridad y bienestar",
+    slogan: "Nuestra especialización",
     paragraph:
-      "Esse sit Lorem anim nostrud. Do ea minim velit nisi dolor aliquip non nulla dolore. Enim dolore consequat voluptate excepteur anim tempor laboris incididunt enim eu esse.",
+      "En el año 2023, nació Tiims con la visión de simplificar la vida y generar oportunidades. Inspirados por la seguridad y el bienestar de nuestros clientes, creamos una plataforma que refleja nuestro compromiso en cada conexión, asegurando confianza y tranquilidad en cada servicio.",
   },
   mission: [
     {
       icon: "fa-solid fa-building-flag",
       name: "mision",
       paragraph:
-        "Fugiat velit occaecat consectetur fugiat eiusmod excepteur incididunt id adipisicing sint. Culpa non minim culpa in occaecat incididunt sunt dolore non ipsum sunt eu ea. Proident minim dolore aliqua incididunt aute do. Cupidatat est nisi ipsum nulla pariatur anim culpa sunt aliquip.",
+        "Nuestra misión en Tiims es brindar una plataforma innovadora que conecta a individuos con servicios esenciales y oportunidades laborales. Nos esforzamos por simplificar la vida cotidiana al fomentar conexiones confiables y flexibles entre clientes y especialistas.",
     },
     {
       icon: "fa-solid fa-eye",
       name: "vision",
       paragraph:
-        "Fugiat velit occaecat consectetur fugiat eiusmod excepteur incididunt id adipisicing sint. Culpa non minim culpa in occaecat incididunt sunt dolore non ipsum sunt eu ea. Proident minim dolore aliqua incididunt aute do. Cupidatat est nisi ipsum nulla pariatur anim culpa sunt aliquip.",
+        "En Tiims, aspiramos a ser la primera elección para quienes buscan soluciones y oportunidades en servicios esenciales. Buscamos crear una comunidad de confianza donde las personas puedan colaborar y prosperar, impulsados por la conveniencia y la calidad.",
     },
   ],
 
   ownersComments: [
     {
-      photo: "https://randomuser.me/api/portraits/men/31.jpg",
+      photo:
+        "https://media.licdn.com/dms/image/D4E03AQHJYL8g9LLvkQ/profile-displayphoto-shrink_800_800/0/1666198290375?e=1697673600&v=beta&t=LAB5BUf74s_VPVrHBrEF4qOJfFFbsKaCYrRcyRqT4kg",
       comment:
-        "Aliqua exercitation non culpa in. Anim pariatur veniam ea mollit. Ut exercitation aute reprehenderit veniam Lorem occaecat deserunt nulla ad officia. Labore velit minim Lorem tempor laborum veniam incididunt excepteur consectetur do dolore. Pariatur amet aliquip magna dolor nulla proident incididunt commodo non aute dolore. Irure incididunt incididunt adipisicing ",
-      name: "nastoehu asn",
-      cargo: "nsaoehu nsatoueo",
-    },
-    {
-      photo: "https://randomuser.me/api/portraits/men/35.jpg",
-      comment:
-        "Aliqua exercitation non culpa in. Anim pariatur veniam ea mollit. Ut exercitation aute reprehenderit veniam Lorem occaecat deserunt nulla ad officia. Labore velit minim Lorem tempor laborum veniam incididunt excepteur consectetur do dolore. Pariatur amet aliquip magna dolor nulla proident incididunt commodo non aute dolore. Irure incididunt incididunt ",
-      name: "nastoehu asn",
-      cargo: "nsaoehu nsatoueo",
+        "Estoy orgulloso de liderar una empresa que revoluciona la forma en que las personas acceden a servicios y oportunidades laborales. Nuestro enfoque en la innovación, la confianza y la comunidad está cambiando positivamente la vida de individuos y especialistas en toda nuestra plataforma.",
+      name: "Adrian Vasquez",
+      cargo: "CEO de Tiims",
     },
   ],
 };

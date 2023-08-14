@@ -20,7 +20,7 @@ export default function OwnerComments() {
             >
               <img
                 className="h-20 w-20 rounded-full mx-auto mb-4
-                md:rounded-none md:mb-0 md:w-[400px] md:h-auto object-cover
+                md:rounded-none md:mb-0 md:w-[200px] md:h-auto object-cover
                 "
                 src={comment.photo}
                 alt={"owner-photo"}

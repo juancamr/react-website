@@ -25,7 +25,8 @@ export default function CustomButton({
 
     <!-- default -->
     rounded-3xl
-    transition-colors
+    transition-all
+    hover:rounded-none
     shadow-xl
     py-4
     px-7

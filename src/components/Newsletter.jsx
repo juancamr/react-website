@@ -39,7 +39,7 @@ export default function () {
         bg-gradient-to-tr
         from-gray-600 via-gray-700 to-gray-800
         rounded-3xl
-        p-8 md:p-14 lg:p-16
+        p-6 md:p-8 lg:p-14
         border border-gray-200
         shadow-xl
         flex items-center justify-center
@@ -51,9 +51,7 @@ export default function () {
           <i class="fa-solid fa-at text-5xl mb-4"></i>
         </div>
         <Heading className="uppercase mb-3">Suscr&iacute;bete</Heading>
-        <Paragraph className="mb-5">
-          Recibe promociones y descuentos en tus servicios
-        </Paragraph>
+        <Paragraph className="mb-5">Recibe promociones y descuentos</Paragraph>
         <form
           onSubmit={onSubmit}
           className="grid grid-cols-5 gap-x-2 lg:w-1/2 xl:w-96 mx-auto"
@@ -62,6 +60,7 @@ export default function () {
             className="rounded-3xl border border-gray-200 shadow-xl
           col-span-3
         text-lg px-4 py-2
+        text-gray-800
         "
             ref={input}
             type="email"

@@ -5,31 +5,7 @@ import CustomP from "../../../components/custom/CustomP";
 import CustomH3 from "../../../components/custom/CustomH3";
 import CustomButton from "../../../components/custom/CustomButton";
 import { LINK_COMPANY } from "../../../common/constants";
-
-const planes = {
-  90: {
-    name: "Seleccion 90",
-    price: "4820",
-    features: ["taoe hun nstahoeu", "taoe hun nstahoeu"],
-  },
-  180: {
-    name: "Seleccion 180",
-    price: "4820",
-    features: ["taoe hun nstahoeu", "taoe hun nstahoeu", "taoe hun nstahoeu"],
-  },
-  360: {
-    name: "Seleccion 360",
-    price: "4820",
-    features: [
-      "taoe hun nstahoeu",
-      "taoe hun nstahoeu",
-      "taoe hun nstahoeu",
-      "taoe hun nstahoeu",
-      "taoe hun nstahoeu",
-      "taoe hun nstahoeu",
-    ],
-  },
-};
+import { company } from "../../../common/content";
 
 const Planes = () => {
   return (
@@ -44,21 +20,21 @@ const Planes = () => {
       <div className="grid xl:grid-cols-2 gap-5">
         <section className="flex items-end">
           <div className="w-full">
-            <CustomH1 styles="mb-8 xl:mb-6 text-darkblue-500">
+            <h2 className="mb-8 text-darkblue-500 text-5xl font-bold">
               Tarifas de reclutamiento
-            </CustomH1>
+            </h2>
             <div className="grid md:grid-cols-2 gap-5">
               <div className="flex items-end">
                 <Plan
-                  name={planes[90].name}
-                  price={planes[90].price}
-                  features={planes[90].features}
+                  name={company.planes[90].name}
+                  price={company.planes[90].price}
+                  features={company.planes[90].features}
                 />
               </div>
               <Plan
-                name={planes[180].name}
-                price={planes[180].price}
-                features={planes[180].features}
+                name={company.planes[180].name}
+                price={company.planes[180].price}
+                features={company.planes[180].features}
               />
             </div>
           </div>
@@ -67,9 +43,9 @@ const Planes = () => {
           <div className="grid md:grid-cols-2 w-full">
             <Plan
               isBlue
-              name={planes[360].name}
-              price={planes[360].price}
-              features={planes[360].features}
+              name={company.planes[360].name}
+              price={company.planes[360].price}
+              features={company.planes[360].features}
             />
             <div className="items-end hidden md:flex">
               <img
@@ -133,12 +109,14 @@ function Plan({ price, name, features, isBlue }) {
 function Card({ isBlue, children }) {
   return (
     <div
-      className={`rounded-[50px]
+      className={`rounded-3xl
       ${
         isBlue === true
-          ? "bg-gradient-to-r from-blue-500 via-blue-300 to-sky-200 text-white"
-          : "bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 text-gray-800"
+          ? "bg-gradient-to-l from-blue-400 via-blue-500 to-blue-600 text-white"
+          : "bg-gradient-to-r from-slate-50 via-gray-100 to-gray-200 text-gray-800"
       }
+      border border-gray-300
+      shadow-xl
       p-10
       w-full
   `}

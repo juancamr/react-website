@@ -12,6 +12,7 @@ import SloganEspecialista from "./components/SloganEspecialista";
 import Payment from "./components/Payment";
 import BottomContainer from "./components/BottomContainer";
 import MainContainer from "../../components/MainContainer";
+import "./Especialistas.css";
 
 const Especialistas = () => {
   useEffect(() => {
@@ -20,7 +21,9 @@ const Especialistas = () => {
   return (
     <MainContainer blue>
       <SloganEspecialista />
-      <Requisitos />
+      <div id="requisitos-container" className="py-8 lg:py-24 shadow-xl">
+        <Requisitos />
+      </div>
       <Payment />
       <BottomContainer />
     </MainContainer>

@@ -14,8 +14,8 @@ const Questions = () => {
     <MainContainer beige>
       <Container>
         <div className="min-h-screen grid lg:grid-cols-2 gap-5">
-          <Qa questions={questions} />
-          <div>
+          <Qa questions={questions} searchPlaceholder={"¿Dónde puedo ver los términos y condiciones?"} />
+          <div className="hidden lg:block">
             <img
               className="h-[800px] object-cover w-full"
               src="assets/images/update/questions.webp"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputSearch from "../../components/inputs/InputSearch";
 import AccordionList from "../accordion/AccordionList";
 import CustomH2 from "../custom/CustomH2";
+import { quitarTildes } from "../../utils/stringFormatter";
 
 const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
   const [search, setSearch] = useState("");
@@ -17,9 +18,9 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
     } else {
       setQuestions(
         questionsList.filter((questionItem) => {
-          return questionItem.question
-            .toLowerCase()
-            .includes(value.toLowerCase());
+          return quitarTildes(questionItem.question.toLowerCase()).includes(
+            quitarTildes(value.toLowerCase())
+          );
         })
       );
       if (questionsList.length === 0) {
@@ -29,7 +30,7 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
   };
   return (
     <section className="px-4">
-      <CustomH2 styles="text-center mb-8 text-darkorange-600">
+      <CustomH2 styles="text-center mb-8 text-orange-600">
         &#191;Preguntas? Aqu&iacute; te ayudamos
       </CustomH2>
       <div className={`${styles}`}>

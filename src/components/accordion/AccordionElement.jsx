@@ -1,7 +1,6 @@
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function AccordionELement({ question, answer, index }) {
@@ -12,14 +11,10 @@ export default function AccordionELement({ question, answer, index }) {
         aria-controls={`panel${index + 1}a-content`}
         id={`panel${index + 1}a-header`}
       >
-        <Typography>
-          <p className="font-medium text-gray-800 text-xl">{question}</p>
-        </Typography>
+        <p className="font-medium text-gray-800 text-xl">{question}</p>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>
-          <p className="text-lg font-light">{answer}</p>
-        </Typography>
+        <p className="text-lg font-light">{answer}</p>
       </AccordionDetails>
     </Accordion>
   );

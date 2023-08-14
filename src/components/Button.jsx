@@ -37,7 +37,7 @@ export default function Button({
       ${big && "text-3xl"}
       ${sm && "text-sm"}
       ${styles}
-      `}
+       `}
       >
         {children}
       </a>

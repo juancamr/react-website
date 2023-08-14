@@ -12,7 +12,7 @@ export default function Requisitos() {
     <Container>
       <CustomH2
         styles="
-      text-blue-700 
+        text-blue-300
       text-left
       md:text-center 
       mb-2"
@@ -21,29 +21,29 @@ export default function Requisitos() {
       </CustomH2>
       <CustomP
         styles="
-      text-gray-800  
+      text-white
       md:text-center
       mb-5 
-      lg:mb-10"
+      lg:mb-14"
       >
         {paragraph}
       </CustomP>
-      <div className="grid lg:grid-cols-5 gap-4 lg:px-20 2xl:px-40">
+      <div className="grid lg:grid-cols-5 gap-4 ">
         <div className=" flex items-center lg:col-span-3">
           <div>
             <CustomH2
               styles="
             lg:px-5
-            mb-3  
+            mb-6
             text-orange-400"
             >
               {titleRequirements}
             </CustomH2>
-            <div className="text-slate-800 lg:px-5">
-              <ul className="space-y-5">
+            <div className="lg:px-5 text-white">
+              <ul className="space-y-3">
                 {requirements.map((requisito, index) => (
                   <li key={index}>
-                    <CustomP styles="font-light text-gray-800">
+                    <CustomP styles="font-light">
                       {index + 1}. {requisito}
                     </CustomP>
                   </li>
@@ -54,9 +54,9 @@ export default function Requisitos() {
         </div>
         <div className="lg:px-4 lg:col-span-2">
           <img
-            src="assets/images/requisitos.jpg"
+            src="https://img.freepik.com/free-photo/high-angle-multiple-election-questionnaires_23-2148265537.jpg?w=996&t=st=1692026398~exp=1692026998~hmac=e1a02b160b1672b6ab277922e2fe2a70473cfef61dd6ac9a0ab94ee2623364e9"
             alt="image"
-            className="object-cover h-full w-full rounded-3xl md:h-72 lg:h-96"
+            className="hidden lg:block lg:h-full object-cover"
           />
           {/* <div className="w-full rounded-3xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500 to-yellow-300">
               <RequisitosIcon />

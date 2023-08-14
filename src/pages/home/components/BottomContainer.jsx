@@ -7,7 +7,7 @@ const BottomContainer = () => {
   const { headingDownload, paragraphDownload } = home.downloadSection;
   return (
     <Container>
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-4 lg:gap-10">
         <Download
           heading={headingDownload}
           subHeading={paragraphDownload}

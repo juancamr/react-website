@@ -36,7 +36,7 @@ const TopContainer = () => {
         </section>
         <div className="h-[550px] 2xl:h-[700px]">
           <img
-            src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?cs=srgb&dl=pexels-fauxels-3182812.jpg&fm=jpg"
+            src="assets/images/update/nosotros.webp"
             className="h-full w-full object-cover
               brightness-75 lg:brightness-100
               "
