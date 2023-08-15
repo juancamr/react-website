@@ -1,8 +1,8 @@
 export const home = {
   topContainer: {
-    title: "La app multiservicios N1 del Perú",
+    title: "La app multiservicios N.º 1 del Perú",
     paragraph:
-      "Contrata especialistas verificados y confiables para resolver tus tareas del hogar",
+      "Contrata especialistas verificados y confiables para resolver tus tareas del hogar.",
     downloadButton: "Descarga la app",
     reservaButton: "Reserva tus servicios",
     image: "assets/images/update/mockup_top.webp",
@@ -20,7 +20,7 @@ export const home = {
       },
       {
         icon: "assets/images/update/programalo.png",
-        paragraph: "Prográmalo",
+        paragraph: "Programa tu servicio",
       },
       {
         icon: "assets/images/update/paga.png",
@@ -31,7 +31,7 @@ export const home = {
   services: {
     title: "Servicios",
     paragraph:
-      "¡Decide reservar o programar tu servicio segun tu conveniencia y la opción de pago que prefieras!",
+      "¡Decide reservar o programar tu servicio según tu conveniencia y la opción de pago que prefieras!",
     serviceList: [
       {
         icon: "fa-solid fa-broom",
@@ -56,23 +56,23 @@ export const home = {
     title:
       "¿Estás preparado para descubrir una APP que te facilitará el día a día?",
     paragraph:
-      "Miles de peruanos estan solicitando a sus especialistas, tu no te quedes atrás",
+      "Miles de peruanos están solicitando a sus especialistas, tú no te quedes atrás.",
   },
   userCommentsSection: {
-    title: "Mira que opinan nuestros clientes",
+    title: "Mira qué opinan nuestros clientes",
     paragraph:
-      "Algunos de los muchos de nuestros clientes estan felices con el actual servicio",
+      "Algunos de los muchos de nuestros clientes están felices con el servicio actual.",
     comments: [
       {
         name: "Anónimo",
         photo: "https://cdn-icons-png.flaticon.com/512/219/219969.png",
-        comment: "Me parecio una excelente idea, me ahorra muchísimo tiempo.",
+        comment: "Me pareció una excelente idea, me ahorra muchísimo tiempo.",
         rate: 4,
       },
     ],
   },
   downloadSection: {
-    headingDownload: "¿Listo para probar tiims?",
+    headingDownload: "¿Listo para probar Tiims?",
     paragraphDownload: "Optimiza tu día a día",
   },
 };
@@ -80,7 +80,7 @@ export const home = {
 export const especialistas = {
   topContainer: {
     title: "TRABAJA CON TIIMS",
-    paragraph: "Gana más de S/ 2,400 al mes, trabajando en tus tiempos libres",
+    paragraph: "Gana más de S/ 2,400 al mes, trabajando en tus tiempos libres.",
     downloadButton: "Regístrate aquí",
     image: "assets/images/update/especialista_top.webp",
   },
@@ -92,12 +92,12 @@ export const especialistas = {
       "Sube una imagen que muestre tu DNI por ambos lados.",
       "Sube tu Certificado Único Laboral CertiJoven o CertiAdulto según sea el caso.",
       "Sube tu recibo de luz o agua.",
-      "Carga tu CV actualizado (opcional)",
+      "Carga tu CV actualizado (opcional).",
       "Reserva tu cita para pasar el proceso de poligrafía.",
     ],
   },
   payment: {
-    title: "Metodos de pago",
+    title: "Métodos de pago",
     methods: [
       {
         icon: "https://seeklogo.com/images/Y/yape-app-logo-1FD46D1120-seeklogo.com.png",
@@ -119,7 +119,7 @@ export const especialistas = {
   },
   downloadSection: {
     headingDownload: "¿Listo para empezar a ganar dinero?",
-    paragraphDownload: "Vuélvete un especialista",
+    paragraphDownload: "Conviértete en un especialista",
   },
 };
 
@@ -127,8 +127,8 @@ export const company = {
   topContainer: {
     title: "Encuentra a tu colaborador ideal en 24 horas*",
     paragraph:
-      "Encarga el riguroso proceso de selección de su personal a Tiims",
-    downloadButton: "Empecemos",
+      "Encarga el riguroso proceso de selección de su personal a Tiims.",
+    downloadButton: "Comencemos",
   },
   mapa: {
     title: "Nuestras alianzas en reclutamiento",
@@ -136,13 +136,13 @@ export const company = {
 
   planes: {
     90: {
-      name: "Seleccion 90",
-      price: "4820",
+      name: "Selección 90",
+      price: "215",
       features: ["Verificación social", "Entrevista preempleo"],
     },
     180: {
-      name: "Seleccion 180",
-      price: "4820",
+      name: "Selección 180",
+      price: "256",
       features: [
         "Verificación social",
         "Entrevista preempleo",
@@ -150,7 +150,7 @@ export const company = {
       ],
     },
     360: {
-      name: "Seleccion 360",
+      name: "Selección 360",
       price: "4820",
       features: [
         "Verificación domiciliaria",
@@ -171,9 +171,9 @@ export const company = {
 
 export const aboutUs = {
   whatWeDo: {
-    title: "Juntos creamos soluciones",
+    title: "Juntos Creamos Soluciones",
     paragraph:
-      "Nos unimos como una comunidad en Tiims para abordar desafíos diarios. Desde conectar a jóvenes con servicios esenciales hasta brindar a los especialistas la oportunidad de compartir sus habilidades, colaboramos para construir un entorno donde las soluciones fluyen. Nuestra plataforma es el lienzo donde la innovación y la confianza convergen, creando un impacto significativo en la vida de todos los involucrados. Estos son algunos de nuestros objetivos en nuestros clientes:",
+      "Nos unimos como comunidad en Tiims para abordar desafíos diarios. Desde conectar a jóvenes con servicios esenciales hasta brindar a los especialistas la oportunidad de compartir sus habilidades, colaboramos para construir un entorno donde las soluciones fluyen. Nuestra plataforma es el lienzo donde la innovación y la confianza convergen, creando un impacto significativo en la vida de todos los involucrados. Estos son algunos de nuestros objetivos para nuestros clientes:",
     paragraphs: [
       "Ayudar con su agenda ocupada. Simplificamos la vida al conectar a los usuarios con servicios esenciales en su horario conveniente, eliminando la preocupación por tareas domésticas y mejorando la calidad de vida.",
       "Empleo flexible. Ofrecemos a los especialistas la oportunidad de trabajar de acuerdo a sus habilidades y horarios, brindándoles una fuente confiable de ingresos y empoderamiento.",
@@ -186,21 +186,21 @@ export const aboutUs = {
       "Nuestro modelo de operación se basa en la sinergia entre personas y tecnología. Proporcionamos una plataforma intuitiva que conecta a usuarios con especialistas confiables y servicios esenciales. Esta interacción fluida y segura impulsa nuestra misión de mejorar la vida cotidiana para todos.",
   },
   ourSpecialization: {
-    title: "Seguridad y bienestar",
-    slogan: "Nuestra especialización",
+    title: "Seguridad y Bienestar",
+    slogan: "Nuestra Especialización",
     paragraph:
       "En el año 2023, nació Tiims con la visión de simplificar la vida y generar oportunidades. Inspirados por la seguridad y el bienestar de nuestros clientes, creamos una plataforma que refleja nuestro compromiso en cada conexión, asegurando confianza y tranquilidad en cada servicio.",
   },
   mission: [
     {
       icon: "fa-solid fa-building-flag",
-      name: "misión",
+      name: "Misión",
       paragraph:
         "Nuestra misión en Tiims es brindar una plataforma innovadora que conecta a individuos con servicios esenciales y oportunidades laborales. Nos esforzamos por simplificar la vida cotidiana al fomentar conexiones confiables y flexibles entre clientes y especialistas.",
     },
     {
       icon: "fa-solid fa-eye",
-      name: "visión",
+      name: "Visión",
       paragraph:
         "En Tiims, aspiramos a ser la primera elección para quienes buscan soluciones y oportunidades en servicios esenciales. Buscamos crear una comunidad de confianza donde las personas puedan colaborar y prosperar, impulsados por la conveniencia y la calidad.",
     },
@@ -212,7 +212,7 @@ export const aboutUs = {
         "https://media.licdn.com/dms/image/D4E03AQHJYL8g9LLvkQ/profile-displayphoto-shrink_800_800/0/1666198290375?e=1697673600&v=beta&t=LAB5BUf74s_VPVrHBrEF4qOJfFFbsKaCYrRcyRqT4kg",
       comment:
         "Estoy orgulloso de liderar una empresa que revoluciona la forma en que las personas acceden a servicios y oportunidades laborales. Nuestro enfoque en la innovación, la confianza y la comunidad está cambiando positivamente la vida de individuos y especialistas en toda nuestra plataforma.",
-      name: "Adrian Vasquez",
+      name: "Adrián Vásquez",
       cargo: "CEO de Tiims",
     },
   ],

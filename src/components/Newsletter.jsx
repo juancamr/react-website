@@ -61,6 +61,7 @@ export default function () {
             className="rounded-xl border border-gray-200 shadow-xl
           col-span-3
         text-lg px-4 py-2
+        bg-slate-50
         text-gray-800
         "
             ref={input}
@@ -91,6 +92,7 @@ export default function () {
             className="bg-slate-50
         absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
         w-96 xl:w-[500px] border rounded-3xl border-gray-400 shadow-xl p-8
+        text-gray-800
         "
           >
             <Heading className="mb-4">&#161;Suscrito!</Heading>

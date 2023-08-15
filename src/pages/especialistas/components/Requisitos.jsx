@@ -12,7 +12,7 @@ export default function Requisitos() {
     <Container>
       <CustomH2
         styles="
-        text-blue-300
+        text-slate-100
       text-left
       md:text-center 
       mb-2"
@@ -54,7 +54,7 @@ export default function Requisitos() {
         </div>
         <div className="lg:px-4 lg:col-span-2">
           <img
-            src="https://img.freepik.com/free-photo/high-angle-multiple-election-questionnaires_23-2148265537.jpg?w=996&t=st=1692026398~exp=1692026998~hmac=e1a02b160b1672b6ab277922e2fe2a70473cfef61dd6ac9a0ab94ee2623364e9"
+            src="assets/images/update/requisitos.webp"
             alt="image"
             className="hidden lg:block lg:h-full object-cover"
           />
