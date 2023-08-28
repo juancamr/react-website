@@ -4,6 +4,7 @@ import Paragraph from "../../../components/text/Paragraph";
 import { especialistas } from "../../../common/content";
 import CustomH2 from "../../../components/custom/CustomH2";
 import CustomP from "../../../components/custom/CustomP";
+import CustomButton from "../../../components/custom/CustomButton";
 
 export default function Requisitos() {
   const { title, paragraph, titleRequirements, requirements } =
@@ -40,7 +41,7 @@ export default function Requisitos() {
               {titleRequirements}
             </CustomH2>
             <div className="lg:px-5 text-white">
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-12">
                 {requirements.map((requisito, index) => (
                   <li key={index}>
                     <CustomP styles="font-light">
@@ -49,6 +50,15 @@ export default function Requisitos() {
                   </li>
                 ))}
               </ul>
+              <CustomButton
+                currentPage
+                isLink
+                link={"provider/register"}
+                styles={"mb-5"}
+                white
+              >
+                &#161;Reg&iacute;strate ahora!
+              </CustomButton>
             </div>
           </div>
         </div>

@@ -111,11 +111,18 @@ export const especialistas = {
     paragraph: "Requisitos para tu registro como especialista",
     titleRequirements: "Documentación",
     requirements: [
-      "Sube una imagen que muestre tu DNI por ambos lados.",
-      "Sube tu Certificado Único Laboral CertiJoven o CertiAdulto según sea el caso.",
-      "Sube tu recibo de luz o agua.",
-      "Carga tu CV actualizado (opcional).",
-      "Reserva tu cita para pasar el proceso de poligrafía.",
+      "Tu número de DNI.",
+      "Tu dirección de domicilio.",
+      "Tu número de celular.",
+      "Tu ocupación actual.",
+      "Subir tu curriculum vitae.",
+      "Subir tu certijoven.",
+      "Prueba de confiabilidad de acuerdo a servicios seleccionados.",
+      // "Sube una imagen que muestre tu DNI por ambos lados.",
+      // "Sube tu Certificado Único Laboral CertiJoven o CertiAdulto según sea el caso.",
+      // "Sube tu recibo de luz o agua.",
+      // "Carga tu CV actualizado (opcional).",
+      // "Reserva tu cita para pasar el proceso de poligrafía.",
     ],
   },
   payment: {
@@ -255,14 +262,28 @@ export const aboutUs = {
       comment:
         "Nuestra estrategia comunicó con éxito cómo la aplicación puede transformar tiempos libres en ingresos sustanciales. Ver cómo las empresas adoptan esta solución y prosperan es nuestra mayor recompensa.",
       name: "María Cortez",
-      cargo: "marketing",
+      cargo: "Growth Marketing",
+    },
+    {
+      photo: "assets/images/us/marketing-manager.png",
+      comment:
+        "Dirigir esta innovadora plataforma es un honor. Conectamos talentos especializados con aquellos que necesitan su ayuda, generando ingresos adicionales y resolviendo problemas diarios. Mi visión es seguir transformando vidas a través de esta comunidad única.",
+      name: "Cheke Merino",
+      cargo: "Marketing Manager",
     },
     {
       photo: "assets/images/us/ventas.png",
       comment:
         "Conectamos con diversas empresas y fuimos testigos de cómo la aplicación revolucionó su flexibilidad financiera. Nuestro trabajo se traduce en crecimiento económico real y clientes satisfechos.",
       name: "Fabiana Rodriguez",
-      cargo: "sales manager",
+      cargo: "Sales Manager",
+    },
+    {
+      photo: "assets/images/us/seleccion.png",
+      comment:
+        "Guiar los sueños profesionales es mi pasión. Seleccionamos mentes brillantes que potencian nuestra misión: brindar ingresos y soluciones. Estoy orgullosa de construir equipos que impulsan el cambio y el éxito.",
+      name: "Graciela Rivera",
+      cargo: "Seleccion y reclutamiento",
     },
   ],
 };
