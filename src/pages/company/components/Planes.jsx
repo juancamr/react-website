@@ -18,12 +18,12 @@ const Planes = () => {
     "
     >
       <div className="grid xl:grid-cols-2 gap-5">
-        <section className="flex items-end">
-          <div className="w-full">
-            <h2 className="mb-8 text-darkblue-500 text-3xl md:text-4xl xl:text-5xl font-bold">
+        <section className="">
+          <div className="w-full h-full relative">
+            <h2 className="text-darkblue-500 text-3xl md:text-4xl xl:text-5xl font-bold mb-6">
               Tarifas de reclutamiento
             </h2>
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-5 xl:absolute w-full bottom-0">
               <div className="flex items-end">
                 <Plan
                   name={company.planes[90].name}
@@ -32,6 +32,7 @@ const Planes = () => {
                 />
               </div>
               <Plan
+                isBlue
                 name={company.planes[180].name}
                 price={company.planes[180].price}
                 features={company.planes[180].features}
@@ -42,7 +43,6 @@ const Planes = () => {
         <section className="h-full flex items-end">
           <div className="grid md:grid-cols-2 w-full">
             <Plan
-              isBlue
               name={company.planes[360].name}
               price={company.planes[360].price}
               features={company.planes[360].features}
