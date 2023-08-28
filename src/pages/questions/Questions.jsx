@@ -13,15 +13,18 @@ const Questions = () => {
   return (
     <MainContainer beige>
       <Container>
-        <div className="min-h-screen grid lg:grid-cols-2 gap-5">
-          <Qa questions={questions} searchPlaceholder={"¿Dónde puedo ver los términos y condiciones?"} />
-          <div className="hidden lg:block">
+        <div className="min-h-screen xl:w-1/2 md:w-3/4 mx-auto">
+          <Qa
+            questions={questions}
+            searchPlaceholder={"¿Dónde puedo ver los términos y condiciones?"}
+          />
+          {/* <div className="hidden lg:block">
             <img
               className="h-[800px] object-cover w-full"
               src="assets/images/update/questions.webp"
               alt=""
             />
-          </div>
+          </div> */}
         </div>
       </Container>
     </MainContainer>

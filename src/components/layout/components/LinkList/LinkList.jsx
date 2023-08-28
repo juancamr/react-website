@@ -5,31 +5,6 @@ import Link from "../Link/Link";
 import "./LinkList.css";
 
 const LinkList = () => {
-  console.log(window.location.pathname);
-  useEffect(() => {
-    // const navbar = document.querySelector("#navbar");
-    // const links = document.querySelectorAll("#navbar a");
-    // function changeColorLinks(color) {
-    //   links.forEach(function (link) {
-    //     if (color === "gray") {
-    //       link.classList.add("gray-link");
-    //     } else {
-    //       link.classList.add("white-link");
-    //     }
-    //   });
-    // }
-    // window.onscroll = function () {
-    //   if (window.scrollY >= 100) {
-    //     navbar.classList.add("bg-slate-50");
-    //     navbar.classList.add("shadow-xl");
-    //     changeColorLinks("gray");
-    //   } else {
-    //     navbar.classList.remove("bg-slate-50");
-    //     navbar.classList.remove("shadow-xl");
-    //     changeColorLinks("white");
-    //   }
-    // };
-  }, []);
   return (
     <nav
       id="navbar"

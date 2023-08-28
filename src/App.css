@@ -41,3 +41,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
+#services-checkboxes {
+  border-radius: 2rem !important;
+}

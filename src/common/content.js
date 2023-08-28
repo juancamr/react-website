@@ -58,15 +58,37 @@ export const home = {
     paragraph:
       "Miles de peruanos están solicitando a sus especialistas, tú no te quedes atrás.",
   },
-  userCommentsSection: {
-    title: "Mira qué opinan nuestros clientes",
+  especialistasCommentsSection: {
+    title: "Porque nos gusta leerlos...",
     paragraph:
-      "Algunos de los muchos de nuestros clientes están felices con el servicio actual.",
+      "Estos son algunos de los comentarios que nos dejan nuestros usuarios.",
     comments: [
       {
-        name: "Anónimo",
-        photo: "https://cdn-icons-png.flaticon.com/512/219/219969.png",
-        comment: "Me pareció una excelente idea, me ahorra muchísimo tiempo.",
+        name: "María B.",
+        photo: "assets/images/especialistas/especialista1.jpeg",
+        comment:
+          "Libertad total para elegir proyectos y horarios, ¡mis ingresos aumentaron notablemente!",
+        rate: 4,
+      },
+      {
+        name: "Oscar G.",
+        photo: "assets/images/especialistas/especialista2.jpeg",
+        comment:
+          "Plataforma eficiente que potenció mis habilidades y generó ganancias adicionales significativas.",
+        rate: 4,
+      },
+      {
+        name: "Kevin S.",
+        photo: "assets/images/especialistas/especialista3.jpeg",
+        comment:
+          "Flexibilidad y demanda constante de trabajos, excelente aliado para ingresos extras satisfactorios.",
+        rate: 4,
+      },
+      {
+        name: "Wilfredo P.",
+        photo: "assets/images/especialistas/especialista4.jpeg",
+        comment:
+          "Como freelancer, esta app marcó la diferencia al permitirme monetizar con mis habilidades cómodamente.",
         rate: 4,
       },
     ],
@@ -81,7 +103,7 @@ export const especialistas = {
   topContainer: {
     title: "TRABAJA CON TIIMS",
     paragraph: "Gana más de S/ 2,400 al mes, trabajando en tus tiempos libres.",
-    downloadButton: "Regístrate aquí",
+    downloadButton: "Descarga la app",
     image: "assets/images/update/especialista_top.webp",
   },
   requirements: {
@@ -123,6 +145,29 @@ export const especialistas = {
   },
 };
 
+const features90 = [
+  "Entrevista preselección",
+  "Entrevista preempleo",
+  "Datos personales",
+  "Verificación laboral",
+  "Verificación social",
+];
+const features180 = [
+  ...features90,
+  "Entrevista psicológica",
+  "Psicolaboral predictiva",
+  "Psicolaboral proyectiva",
+  "Psicolaboral conductual",
+];
+const features360 = [
+  ...features180,
+  "Verificación domiciliaria",
+  "Verificación académica",
+  "Verificación crediticia",
+  "Psicolaboral cognitiva",
+  "Poligrafía",
+];
+
 export const company = {
   topContainer: {
     title: "Encuentra a tu colaborador ideal en 24 horas*",
@@ -137,34 +182,18 @@ export const company = {
   planes: {
     90: {
       name: "Selección 90",
-      price: "215",
-      features: ["Verificación social", "Entrevista preempleo"],
+      price: "899",
+      features: features90,
     },
     180: {
       name: "Selección 180",
-      price: "256",
-      features: [
-        "Verificación social",
-        "Entrevista preempleo",
-        "Prueba psicolaboral",
-      ],
+      price: "1599",
+      features: features180,
     },
     360: {
       name: "Selección 360",
-      price: "4820",
-      features: [
-        "Verificación domiciliaria",
-        "Verificación académica",
-        "Verificación laboral",
-        "Verificación crediticia",
-        "Verificación social",
-        "Entrevista psicológica",
-        "Entrevista pre-selección",
-        "Entrevista pre-empleo",
-        "Prueba psicolaboral proyectiva",
-        "Prueba psicolaboral conductual",
-        "Prueba de confiabilidad (poligrafía)",
-      ],
+      price: "1999",
+      features: features360,
     },
   },
 };
@@ -208,12 +237,32 @@ export const aboutUs = {
 
   ownersComments: [
     {
-      photo:
-        "https://media.licdn.com/dms/image/D4E03AQHJYL8g9LLvkQ/profile-displayphoto-shrink_800_800/0/1666198290375?e=1697673600&v=beta&t=LAB5BUf74s_VPVrHBrEF4qOJfFFbsKaCYrRcyRqT4kg",
+      photo: "assets/images/us/ceo.png",
       comment:
         "Estoy orgulloso de liderar una empresa que revoluciona la forma en que las personas acceden a servicios y oportunidades laborales. Nuestro enfoque en la innovación, la confianza y la comunidad está cambiando positivamente la vida de individuos y especialistas en toda nuestra plataforma.",
       name: "Adrián Vásquez",
-      cargo: "CEO de Tiims",
+      cargo: "CEO at Tiims",
+    },
+    {
+      photo: "assets/images/us/programmer.png",
+      comment:
+        "Codificar cada función significó brindar a individuos el control de sus ingresos. Saber que nuestras líneas de código generan oportunidades monetarias y profesionales es increíblemente gratificante.",
+      name: "Juan Carlos Molero",
+      cargo: "DEVELOPER",
+    },
+    {
+      photo: "assets/images/us/marketing.png",
+      comment:
+        "Nuestra estrategia comunicó con éxito cómo la aplicación puede transformar tiempos libres en ingresos sustanciales. Ver cómo las empresas adoptan esta solución y prosperan es nuestra mayor recompensa.",
+      name: "María Cortez",
+      cargo: "marketing",
+    },
+    {
+      photo: "assets/images/us/ventas.png",
+      comment:
+        "Conectamos con diversas empresas y fuimos testigos de cómo la aplicación revolucionó su flexibilidad financiera. Nuestro trabajo se traduce en crecimiento económico real y clientes satisfechos.",
+      name: "Fabiana Rodriguez",
+      cargo: "sales manager",
     },
   ],
 };

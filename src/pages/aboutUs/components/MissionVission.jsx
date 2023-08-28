@@ -11,12 +11,14 @@ const MissionVission = () => {
             className="flex space-x-4 md:space-x-6 lg:space-x-8"
           >
             <div>
-              <i
-                className={`${element.icon} text-orange-500 text-3xl
+              <div className="bg-orange-100 p-2 rounded-xl">
+                <i
+                  className={`${element.icon} text-orange-500 text-3xl
                 md:text-4xl
               lg:text-5xl
               `}
-              ></i>
+                ></i>
+              </div>
             </div>
             <div>
               <h3 className="text-2xl font-bold uppercase mb-5">

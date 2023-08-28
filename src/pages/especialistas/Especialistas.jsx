@@ -1,13 +1,5 @@
-import Comments from "../../components/comments/Comments";
-import { usersComments } from "../../common/constants";
 import { useEffect } from "react";
-import Slogan from "./components/Slogan";
-import Banner from "./components/Banner";
-import Container from "../../components/Container";
 import Requisitos from "./components/Requisitos";
-import Download from "../../components/Download";
-import Heading from "../../components/text/Heading";
-import Instructions from "../home/components/InstructionCard";
 import SloganEspecialista from "./components/SloganEspecialista";
 import Payment from "./components/Payment";
 import BottomContainer from "./components/BottomContainer";

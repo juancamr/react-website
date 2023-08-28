@@ -26,9 +26,12 @@ const Comments = ({ comments, color }) => {
             <div key={comment.name}>
               <SwiperSlide>
                 <div
-                  className={`p-5 sm:p-8 md:p-8 lg:p-14 space-y-4 backdrop-blur-md
+                  className={`p-5 sm:p-8 md:p-8 lg:p-10 space-y-3 backdrop-blur-md
                 ${color === "blue" && "bg-blue-900/95"}
-                ${color === "orange" && "bg-orange-600/95"}
+                ${
+                  color === "orange" &&
+                  "bg-gradient-to-tr from-orange-400 via-orange-500 to-orange-600"
+                }
                 ${color === "black" && "bg-gray-900/95"}
                 h-full w-full`}
                 >
@@ -37,10 +40,10 @@ const Comments = ({ comments, color }) => {
                     src={comment.photo}
                     alt="profile"
                   />
-                  <p className="text-center text-base lg:text-xl font-light">
+                  <p className="text-center text-base  font-light">
                     "{comment.comment}"
                   </p>
-                  <h1 className="text-slate-50 text-center">{comment.name}</h1>
+                  <h3 className="text-slate-50 text-center">{comment.name}</h3>
                   <div className="flex items-center justify-center space-x-1">
                     {[...Array(comment.rate)].map(() => (
                       <StarIcon isActive={true} />

@@ -1,7 +1,7 @@
 import Container from "../../../components/Container";
 import { aboutUs } from "../../../common/content";
 
-const Divider = () => <div className="h-4 w-40 lg:w-80 bg-orange-500 my-4" />;
+const Divider = () => <div className="h-3 w-40 lg:w-80 bg-orange-500 my-4 rounded-xl" />;
 
 const WhatWeDo = () => {
   const { title, paragraph, paragraphs } = aboutUs.whatWeDo;

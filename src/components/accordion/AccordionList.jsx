@@ -19,12 +19,12 @@ export default function AccordionList({ questions }) {
                 aria-controls={`panel${index + 1}a-content`}
                 id={`panel${index + 1}a-header`}
               >
-                <p className="font-medium text-gray-800 text-xl">
+                <p className="font-medium text-gray-800 text-base">
                   {question.question}
                 </p>
               </AccordionSummary>
               <AccordionDetails>
-                <p className="text-lg font-light">
+                <p className="text-base font-light">
                   {question.answer}{" "}
                   <a
                     target="_blank"

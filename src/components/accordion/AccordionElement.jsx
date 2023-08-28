@@ -11,10 +11,10 @@ export default function AccordionELement({ question, answer, index }) {
         aria-controls={`panel${index + 1}a-content`}
         id={`panel${index + 1}a-header`}
       >
-        <p className="font-medium text-gray-800 text-xl">{question}</p>
+        <p className="font-medium text-gray-800 text-base">{question}</p>
       </AccordionSummary>
       <AccordionDetails>
-        <p className="text-lg font-light">{answer}</p>
+        <p className="text-base font-light">{answer}</p>
       </AccordionDetails>
     </Accordion>
   );

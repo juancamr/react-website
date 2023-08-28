@@ -9,7 +9,7 @@ export default function Requisitos() {
   const { title, paragraph, titleRequirements, requirements } =
     especialistas.requirements;
   return (
-    <Container>
+    <Container styles={"px-8"}>
       <CustomH2
         styles="
         text-slate-100

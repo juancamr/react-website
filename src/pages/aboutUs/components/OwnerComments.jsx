@@ -7,7 +7,7 @@ import { aboutUs } from "../../../common/content";
 
 export default function OwnerComments() {
   return (
-    <>
+    <div className="xl:w-1/2 lg:w-3/4 mx-auto">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         {aboutUs.ownersComments.map((comment, index) => (
           <SwiperSlide>
@@ -20,11 +20,13 @@ export default function OwnerComments() {
             >
               <img
                 className="h-20 w-20 rounded-full mx-auto mb-4
-                md:rounded-none md:mb-0 md:w-[200px] md:h-auto object-cover
+                md:rounded-xl md:mb-0 md:w-[200px] lg:w-[250px] md:h-auto object-cover
+                bg-blue-500
                 "
                 src={comment.photo}
                 alt={"owner-photo"}
               />
+
               <div className="md:ml-8">
                 <p
                   className="text-gray-800 text-base font-light mb-3
@@ -46,6 +48,6 @@ export default function OwnerComments() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }

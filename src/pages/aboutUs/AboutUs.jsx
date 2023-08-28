@@ -6,7 +6,6 @@ import MiddleContainer from "./components/MiddleContainer";
 import OurEspecialization from "./components/OurEspecialization";
 import MissionVission from "./components/MissionVission";
 import OwnerComments from "./components/OwnerComments";
-import { image } from "@nextui-org/react";
 
 const AboutUs = () => {
   useEffect(() => {

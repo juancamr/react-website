@@ -82,7 +82,30 @@ export const questions = [
   },
   {
     question: "¿Dónde puedo ver los términos y condiciones?",
+    answer: "Puedes encontrar nuestros términos y condiciones haciendo clic ",
+  },
+  {
+    question:
+      "¿Cómo se remiten los recibos de los servicios y productos solicitados después del registro?",
     answer:
-      "Puedes encontrar nuestros términos y condiciones haciendo clic ",
+      "Después de registrarte a través del sitio web o de la aplicación móvil y proporcionar la información bancaria requerida, autorizas expresamente a GRUPO TIIMS SAC a enviar los recibos de los servicios y productos solicitados a través del correo electrónico que proporcionaste durante el proceso de registro. Si necesitas una factura, asegúrate de agregar los datos fiscales en la aplicación antes de hacer el pedido.",
+  },
+  {
+    question:
+      "¿Qué medidas de seguridad se implementan para proteger los datos bancarios introducidos por el cliente?",
+    answer:
+      "Implementamos rigurosas medidas de seguridad para proteger los datos bancarios introducidos por nuestros clientes. Utilizamos la tecnología de encriptación con Certificación PCI-DSS para garantizar que la información esté protegida durante la transmisión. Además, contamos con un motor antifraude y un sistema de almacenamiento seguro de tarjetas, lo que nos permite ofrecer uno de los sistemas de protección más avanzados y eficaces disponibles actualmente.",
+  },
+  {
+    question:
+      "¿Qué métodos de pago son aceptados para realizar compras en nuestro sitio?",
+    answer:
+      "Ofrecemos la posibilidad de realizar compras mediante tarjeta bancaria, tanto de crédito como de débito, a través de la plataforma de CULQI. La disponibilidad de métodos de pago está sujeta a la discreción de Culqi en todo momento. Puedes obtener más información sobre los métodos de pago y la plataforma Culqi en su página web oficial.",
+  },
+  {
+    question:
+      "¿Qué tarjetas bancarias son aceptadas para realizar compras en nuestro sitio?",
+    answer:
+      "Aceptamos cualquier tarjeta de crédito o débito que sea aceptada habitualmente por GRUPO TIIMS SAC. Las tarjetas Visa y MasterCard son ejemplos de tarjetas aceptadas en nuestro sitio. Es importante destacar que el funcionamiento de las tarjetas bancarias está regido por el contrato existente entre el cliente y el banco emisor, sin que GRUPO TIIMS SAC tenga responsabilidad en relación con los aspectos cubiertos en dichos contratos.",
   },
 ];

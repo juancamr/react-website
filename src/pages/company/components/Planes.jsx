@@ -64,10 +64,14 @@ const Planes = () => {
 function Plan({ price, name, features, isBlue }) {
   return (
     <Card isBlue={isBlue}>
-      <CustomH2 styles="mb-3">
+      <h2 className="font-bold mb-5 text-2xl">{name}°</h2>
+      <h2
+        className={`mb-8 ${isBlue ? "text-blue-500" : "text-orange-600"}
+        text-4xl font-bold
+        `}
+      >
         <span
           className={`text-base
-        ${isBlue ? "text-slate-100" : "text-gray-800"}
         text-gray-800
         mr-2
         font-light`}
@@ -75,33 +79,40 @@ function Plan({ price, name, features, isBlue }) {
           desde
         </span>
         S/{price}
-      </CustomH2>
-      <CustomH3 styles="font-bold mb-5">{name}°</CustomH3>
-      <ul className="space-y-3 mb-6">
-        {features.map((feature, index) => (
-          <li key={index}>
-            <CustomP>
-              <i
-                class={`fa-solid fa-circle-check mr-2
-              ${!isBlue && "text-darkblue-500"}
-              `}
-              ></i>
-              {feature}
-            </CustomP>
-          </li>
-        ))}
-      </ul>
-      <div className="flex justify-center">
+      </h2>
+      <div className="flex justify-center mb-6">
         <CustomButton
           orange={!isBlue}
           white={isBlue}
           isLink
+          small
+          fullWidth
           link={LINK_COMPANY}
           styles={`${!isBlue && "text-white"}`}
         >
           Solicitar
         </CustomButton>
       </div>
+      {/* divider */}
+      <div className="border-b border-gray-400 mb-6"></div>
+      {/* features */}
+      <section className="space-y-2">
+        <p className="font-bold">El plan incluye</p>
+        <ul className="space-y-2 mb-6">
+          {features.map((feature, index) => (
+            <li key={index}>
+              <p>
+                <i
+                  class={`fa-solid fa-check mr-2
+              ${!isBlue ? "text-darkblue-500" : "text-gray-600"}
+              `}
+                ></i>
+                {feature}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </Card>
   );
 }
@@ -112,15 +123,23 @@ function Card({ isBlue, children }) {
       className={`rounded-3xl
       ${
         isBlue === true
-          ? "bg-gradient-to-l from-blue-400 via-blue-500 to-blue-600 text-white"
-          : "bg-gradient-to-r from-slate-50 via-gray-100 to-gray-200 text-gray-800"
+          ? "bg-gradient-to-tl from-white via-white to-blue-100 border-blue-500"
+          : "bg-white border-gray-300"
       }
-      border border-gray-300
+      border
       shadow-xl
-      p-10
+      relative
+      p-8
       w-full
   `}
     >
+      {isBlue && (
+        <div className="absolute left-0 -top-4 w-full flex justify-center">
+          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white rounded-lg uppercase px-4 py-2 text-[0.8rem]">
+            mejor valorado
+          </span>
+        </div>
+      )}
       {children}
     </div>
   );

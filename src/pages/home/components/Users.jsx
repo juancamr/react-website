@@ -13,8 +13,8 @@ const Users = () => {
             border border-gray-200
             bg-gradient-to-tr
             from-blue-300
-            via-blue-500
-            to-blue-700
+            via-orange-500
+            to-orange-600
             rounded-xl
             xl:rounded-[50px]
             grid
@@ -29,12 +29,10 @@ const Users = () => {
           "
         >
           <div>
-            <CustomH2
-              styles="mb-5
-              "
-            >
+            <h2 className="text-2xl lg:text-4xl xl:text-5xl font-bold text-white mb-5">
               {users.title}
-            </CustomH2>
+            </h2>
+
             <CustomP styles="">{users.paragraph}</CustomP>
           </div>
         </div>
@@ -47,7 +45,7 @@ const Users = () => {
 function ImageEspecialista({ hidden }) {
   return (
     <img
-      src="assets/images/update/especialista.png"
+      src="assets/images/update/especialista.jpeg"
       alt="especialista"
       className={`
               h-full
@@ -58,7 +56,7 @@ function ImageEspecialista({ hidden }) {
               md:rounded-none
               md:rounded-r-xl
               lg:rounded-none
-              lg:rounded-r-[50px]
+              lg:rounded-r-xl
               ${
                 hidden
                   ? "hidden md:block"

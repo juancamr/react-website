@@ -1,4 +1,10 @@
-const InputSearch = ({ placeholder, onClick, value, onChangeEvent }) => {
+const InputSearch = ({
+  placeholder,
+  onClick,
+  value,
+  onChangeEvent,
+  onKeyDown,
+}) => {
   return (
     <div>
       <label
@@ -27,6 +33,7 @@ const InputSearch = ({ placeholder, onClick, value, onChangeEvent }) => {
         </div>
         <input
           onChange={onChangeEvent}
+          onKeyDown={onKeyDown}
           type="search"
           id="default-search"
           className="block w-full p-4 pl-10 text-sm lg:text-xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 "

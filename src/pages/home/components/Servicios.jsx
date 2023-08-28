@@ -49,6 +49,7 @@ export default function Servicios() {
           centeredSlides={window.innerHeight < 800 ? true : false}
           spaceBetween={window.innerWidth < 800 ? 20 : 60}
           navigation={true}
+          loop={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >

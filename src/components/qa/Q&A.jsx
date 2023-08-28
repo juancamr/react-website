@@ -29,9 +29,19 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
       actualQuestions(value);
       if (questionsList.length === 0) {
         setError(`No se encontraron resultados para "${value}"`);
+      } else {
+        setError("");
       }
     }
   };
+
+  const onKeyDown = (event) => {
+    console.log("holamundo");
+    if (event.key === "Backspace") {
+      setQuestions(questions);
+    }
+  };
+
   return (
     <section className="px-4">
       <CustomH2 styles="text-center mb-8 text-orange-600">
@@ -45,6 +55,7 @@ const Qa = ({ heading, questions, searchPlaceholder, styles }) => {
           <div className="mb-5">
             <InputSearch
               onChangeEvent={onChangeEvent}
+              onKeyDown={onKeyDown}
               placeholder={searchPlaceholder}
               value={search}
             />

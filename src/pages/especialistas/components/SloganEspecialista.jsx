@@ -29,11 +29,17 @@ const SloganEspecialista = () => {
           <CustomP styles={"text-slate-200 mb-8 xl:mb-10"}>{paragraph}</CustomP>
           <div className="lg:mb-9 xl:mb-10">
             <CustomButton
+              currentPage
               isLink
-              link={LINK_ESPECIALISTA_GOOGLE_PLAY}
+              link={"provider/register"}
               styles={"mb-5"}
               white
             >
+              Regístrate <i class="fa-solid fa-arrow-right ml-2"></i>
+            </CustomButton>
+          </div>
+          <div className="mt-10 lg:mt-0">
+            <CustomButton isLink link={LINK_ESPECIALISTA_GOOGLE_PLAY} white>
               {downloadButton} <i class="fa-brands fa-google-play ml-2"></i>
             </CustomButton>
           </div>
@@ -45,8 +51,8 @@ const SloganEspecialista = () => {
             h-52
             md:h-80
             lg:h-[25rem]
-            xl:h-[30rem]
-            2xl:h-[38rem]
+            2xl:h-[32rem]
+            object-cover
             "
           src={image}
           alt="mockup"
