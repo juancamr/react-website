@@ -98,6 +98,16 @@ export default function FormRegister() {
 
     console.log(data);
     if (validateParams()) {
+      if (stringFormRef.dni.current.value.length !== 8) {
+        setErrorMessage("El DNI debe tener 8 dígitos");
+        setIsOpenErrorModal(true);
+        return;
+      }
+      if (stringFormRef.phone.current.value.length !== 9) {
+        setErrorMessage("El teléfono debe tener 9 dígitos");
+        setIsOpenErrorModal(true);
+        return;
+      }
       if (files[0] === null || files[1] === null) {
         setErrorMessage("Debe subir los documentos");
         setIsOpenErrorModal(true);
