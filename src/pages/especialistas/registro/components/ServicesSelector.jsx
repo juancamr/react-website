@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
-import { ADMIN_URL } from "../../../../common/constants";
+import { ADMIN_URL, servicesOnDemand } from "../../../../common/constants";
 import { defaultLocation } from "../../../../common/constants";
 import { Combobox } from "@headlessui/react";
 import { quitarTildes } from "../../../../utils/stringFormatter";
 
-const ServicesSelector = ({ selectedServices, setSelectedServices }) => {
+const ServicesSelector = ({
+  selectedServices,
+  setSelectedServices,
+  setNeedsPoligrafo,
+}) => {
   const [services, setServices] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -48,12 +52,13 @@ const ServicesSelector = ({ selectedServices, setSelectedServices }) => {
             Especialidades en Tiims
           </label>
           <Combobox
-            onChange={() =>
-              setSelectedServices(function (prev) {
-                if (prev.includes(filteredServices[0])) return prev;
-                return [...prev, filteredServices[0]];
-              })
-            }
+            onChange={() => {
+              // setSelectedServices(function (prev) {
+              //   if (prev.includes(filteredServices[0])) return prev;
+              //   console.log("hola");
+              //   return [...prev, filteredServices[0]];
+              // });
+            }}
             name="distritosList"
           >
             <div className="relative w-full">
@@ -74,7 +79,13 @@ const ServicesSelector = ({ selectedServices, setSelectedServices }) => {
                     onClick={() => {
                       setSelectedServices((prev) => {
                         if (prev.includes(service)) return prev;
-                        return [...prev, service];
+                        const entireServices = [...prev, service];
+                        entireServices.forEach((service_id) => {
+                          if (servicesOnDemand.includes(service_id._id)) {
+                            setNeedsPoligrafo(true);
+                          }
+                        });
+                        return entireServices;
                       });
                     }}
                   >
@@ -88,6 +99,7 @@ const ServicesSelector = ({ selectedServices, setSelectedServices }) => {
       </div>
       {selectedServices.length > 0 && (
         <SelectedServices
+          setNeedsPoligrafo={setNeedsPoligrafo}
           selectedServices={selectedServices}
           setSelectedServices={setSelectedServices}
         />
@@ -96,15 +108,37 @@ const ServicesSelector = ({ selectedServices, setSelectedServices }) => {
   );
 };
 
-function SelectedServices({ selectedServices, setSelectedServices }) {
+function SelectedServices({
+  selectedServices,
+  setSelectedServices,
+  setNeedsPoligrafo,
+}) {
   const deleteSelectedService = (id) => () => {
-    setSelectedServices(
-      selectedServices.filter((service) => service._id !== id)
-    );
+    setSelectedServices(() => {
+      const finalSelected = selectedServices.filter(
+        (service) => service._id !== id
+      );
+      if (finalSelected.length === 0) {
+        setNeedsPoligrafo(false);
+        return finalSelected;
+      }
+
+      const notIncludes = [];
+      finalSelected.forEach((service) => {
+        const { _id } = service;
+        if (!servicesOnDemand.includes(_id)) {
+          notIncludes.push(service);
+        }
+      });
+      if (notIncludes.length === finalSelected.length) {
+        setNeedsPoligrafo(false);
+      }
+      return finalSelected;
+    });
   };
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2 mt-2">
       {selectedServices.map((service) => (
         <span
           key={service._id}

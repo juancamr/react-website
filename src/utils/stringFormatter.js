@@ -14,3 +14,9 @@ export function quitarTildes(palabra) {
 
   return palabra.replace(/[áéíóúÁÉÍÓÚ]/g, (letra) => mapaTildes[letra]);
 }
+
+//function to validate email and also protected from the uppercase
+export function validateEmail(email) {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}

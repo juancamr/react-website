@@ -12,6 +12,16 @@ export const TOTAL_DOWNLOADS = 110;
 export const TOTAL_USERS = 90;
 export const TOTAL_PROVIDERS_HIRED = 80;
 
+export const servicesOnDemand = [
+  "642c85960aedf208b973c709", //limpieza
+  "647f66994d3a8c594919e939", //gasfiteria
+  "647f66cb4d3a8c594919e93c", //pintura
+  "647f67184d3a8c594919e93f", //albanileria
+  "641bd3140b34bd0e036cc4c8", //electricista
+  "642da2cb0aedf208b973cc8b", //profesores
+  "642d9cce0aedf208b973cc68", //paseo de mascotas
+];
+
 export const LINK_USER_GOOGLE_PLAY =
   "https://play.google.com/store/apps/details?id=com.tiims&hl=es_UY";
 export const LINK_ESPECIALISTA_GOOGLE_PLAY =

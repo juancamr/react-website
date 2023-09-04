@@ -68,28 +68,28 @@ export const home = {
         photo: "assets/images/especialistas/especialista1.jpeg",
         comment:
           "Libertad total para elegir proyectos y horarios, ¡mis ingresos aumentaron notablemente!",
-        rate: 4,
+        rate: 5,
       },
       {
         name: "Oscar G.",
         photo: "assets/images/especialistas/especialista2.jpeg",
         comment:
           "Plataforma eficiente que potenció mis habilidades y generó ganancias adicionales significativas.",
-        rate: 4,
+        rate: 5,
       },
       {
         name: "Kevin S.",
         photo: "assets/images/especialistas/especialista3.jpeg",
         comment:
           "Flexibilidad y demanda constante de trabajos, excelente aliado para ingresos extras satisfactorios.",
-        rate: 4,
+        rate: 5,
       },
       {
         name: "Wilfredo P.",
         photo: "assets/images/especialistas/especialista4.jpeg",
         comment:
           "Como freelancer, esta app marcó la diferencia al permitirme monetizar con mis habilidades cómodamente.",
-        rate: 4,
+        rate: 5,
       },
     ],
   },

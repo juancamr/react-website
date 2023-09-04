@@ -2,6 +2,7 @@ import {
   ADMIN_URL,
   LINK_ESPECIALISTA_GOOGLE_PLAY,
   inputsText,
+  servicesOnDemand,
 } from "../../../../common/constants";
 import { useEffect, useRef, useState } from "react";
 import BasicInput from "../../../../components/inputs/BasicInput";
@@ -13,6 +14,8 @@ import FileInput from "../../../../components/inputs/FileInput";
 import CheckBox from "../../../../components/inputs/CheckBox";
 import { distritos, jobElements } from "../../../../common/constants";
 import Loading from "../../../../components/Loading";
+import { validateEmail } from "../../../../utils/stringFormatter";
+import PoligrafoPopover from "./poligrafo-popover";
 
 export default function FormRegister() {
   useEffect(() => {
@@ -21,6 +24,7 @@ export default function FormRegister() {
   const [isOpenSuccessModal, setIsOpenSuccessModal] = useState(false);
   const [isOpenErrorModal, setIsOpenErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [needsPoligrafo, setNeedsPoligrafo] = useState(false);
 
   const [selectedServices, setSelectedServices] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,6 +42,7 @@ export default function FormRegister() {
     dni: useRef(null),
     direccion: useRef(null),
     phone: useRef(null),
+    fecha: useRef(null),
   };
 
   const defaultCity = {
@@ -94,10 +99,15 @@ export default function FormRegister() {
       direccion: stringFormRef.direccion.current.value,
       distrito: selectedDistrito,
       profesion: selectedProfesion,
+      fecha: stringFormRef.fecha.current.value,
     };
 
-    console.log(data);
     if (validateParams()) {
+      if (validateEmail(stringFormRef.email.current.value) === false) {
+        setErrorMessage("El correo no es válido");
+        setIsOpenErrorModal(true);
+        return;
+      }
       if (stringFormRef.dni.current.value.length !== 8) {
         setErrorMessage("El DNI debe tener 8 dígitos");
         setIsOpenErrorModal(true);
@@ -108,6 +118,17 @@ export default function FormRegister() {
         setIsOpenErrorModal(true);
         return;
       }
+      selectedServices.forEach((service) => {
+        if (servicesOnDemand.includes(service._id)) {
+          setErrorMessage(
+            "Es necesario que agende una fecha para una prueba de confiabilidad"
+          );
+          setIsOpenErrorModal(true);
+          return;
+        }
+      });
+      if (isOpenErrorModal) return;
+
       if (files[0] === null || files[1] === null) {
         setErrorMessage("Debe subir los documentos");
         setIsOpenErrorModal(true);
@@ -124,14 +145,12 @@ export default function FormRegister() {
         })
           .then((response) => response.json())
           .then((response) => {
-            console.log(response);
             setIsLoading(false);
             if (response.success) {
               setIsOpenSuccessModal(true);
             } else {
               setErrorMessage(response.message);
               setIsOpenErrorModal(true);
-              console.log(response);
             }
           })
           .catch((error) => {
@@ -252,7 +271,26 @@ export default function FormRegister() {
             <ServicesSelector
               selectedServices={selectedServices}
               setSelectedServices={setSelectedServices}
+              setNeedsPoligrafo={setNeedsPoligrafo}
             />
+            {needsPoligrafo && (
+              <div className="space-y-2">
+                <label className="text-gray-500 flex ">
+                  Fecha Pol&iacute;grafo
+                  <span>
+                    <PoligrafoPopover />
+                  </span>
+                </label>
+                <div class="relative max-w-sm">
+                  <input
+                    ref={stringFormRef.fecha}
+                    type="date"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Seleccionar fecha"
+                  />
+                </div>
+              </div>
+            )}
 
             <div className="flex items-start w-full">
               <div className="space-y-2 grid w-full">
