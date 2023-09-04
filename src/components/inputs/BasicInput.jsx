@@ -7,7 +7,6 @@ const BasicInput = forwardRef(
 
     const handleInputChange = (e) => {
       const { value } = e.target;
-      console.log(value);
       if (type === "password") {
         if (value.length < 8) {
           setErrorMessage(

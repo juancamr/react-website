@@ -236,6 +236,7 @@ export const distritos = [
   "Surquillo",
   "Villa El Salvador",
   "Villa María del Triunfo",
+  "Callao",
 ];
 
 export const jobElements = [
@@ -352,7 +353,7 @@ export const jobElements = [
   "Conserje",
   "Operario de almacén",
   "Operario de limpieza",
-  "Operador dual"
+  "Operador dual",
 ];
 
 export const defaultLocation = {

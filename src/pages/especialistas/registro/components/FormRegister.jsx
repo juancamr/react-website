@@ -77,7 +77,7 @@ export default function FormRegister() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const files = [selectedCv, selectedCertijoven];
-    const data = {
+    let data = {
       first_name: stringFormRef.nombres.current.value,
       last_name: stringFormRef.apellidos.current.value,
       country_phone_code: "+51",
@@ -99,8 +99,10 @@ export default function FormRegister() {
       direccion: stringFormRef.direccion.current.value,
       distrito: selectedDistrito,
       profesion: selectedProfesion,
-      fecha: stringFormRef.fecha.current.value,
     };
+    if (stringFormRef.fecha.current) {
+      data = { ...data, fecha: stringFormRef.current.value };
+    }
 
     if (validateParams()) {
       if (validateEmail(stringFormRef.email.current.value) === false) {
