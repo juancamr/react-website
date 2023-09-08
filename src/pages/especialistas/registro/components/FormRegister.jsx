@@ -16,6 +16,7 @@ import { distritos, jobElements } from "../../../../common/constants";
 import Loading from "../../../../components/Loading";
 import { validateEmail } from "../../../../utils/stringFormatter";
 import PoligrafoPopover from "./poligrafo-popover";
+import { Switch } from "@headlessui/react";
 
 export default function FormRegister() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function FormRegister() {
   const [selectedDistrito, setSelectedDistrito] = useState(null);
   const [selectedProfesion, setSelectedProfesion] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [wantsPermanentJob, setWantsPermanentJob] = useState(false);
 
   const stringFormRef = {
     nombres: useRef(null),
@@ -66,12 +68,27 @@ export default function FormRegister() {
       dni.current.value === "" ||
       direccion.current.value === "" ||
       phone.current.value === "" ||
-      selectedDistrito === null ||
-      selectedProfesion === null
+      selectedDistrito === null
     ) {
-      return false;
-    } else if (password.current.value.length < 8) return false;
-    return true;
+      return {
+        success: false,
+        message: "Debe llenar todos los campos",
+      };
+    } else if (password.current.value.length < 8)
+      return {
+        success: false,
+        message: "La contraseña debe tener más de 8 caracteres",
+      };
+    else if (
+      (selectedProfesion === null || selectedProfesion === "Ninguno") &&
+      selectedServices.length === 0
+    ) {
+      return {
+        success: false,
+        message: "Debe seleccionar una ocupación o especialidad",
+      };
+    }
+    return { success: true };
   };
 
   const handleSubmit = async (event) => {
@@ -99,19 +116,19 @@ export default function FormRegister() {
       direccion: stringFormRef.direccion.current.value,
       distrito: selectedDistrito,
       profesion: selectedProfesion,
+      wantsPermanentJob,
     };
+
     if (stringFormRef.fecha.current) {
-      data = { ...data, fecha: stringFormRef.current.value };
+      if (stringFormRef.fecha.current.value !== "") {
+        data = { ...data, fecha: stringFormRef.fecha.current.value };
+      }
     }
 
-    if (validateParams()) {
+    const response = validateParams();
+    if (response.success) {
       if (validateEmail(stringFormRef.email.current.value) === false) {
         setErrorMessage("El correo no es válido");
-        setIsOpenErrorModal(true);
-        return;
-      }
-      if (stringFormRef.dni.current.value.length !== 8) {
-        setErrorMessage("El DNI debe tener 8 dígitos");
         setIsOpenErrorModal(true);
         return;
       }
@@ -120,16 +137,28 @@ export default function FormRegister() {
         setIsOpenErrorModal(true);
         return;
       }
-      selectedServices.forEach((service) => {
+
+      for (let i = 0; i < selectedServices.length; i++) {
+        const service = selectedServices[i];
         if (servicesOnDemand.includes(service._id)) {
-          setErrorMessage(
-            "Es necesario que agende una fecha para una prueba de confiabilidad"
-          );
-          setIsOpenErrorModal(true);
-          return;
+          if (stringFormRef.fecha.current) {
+            if (stringFormRef.fecha.current.value === "") {
+              setErrorMessage(
+                "Es necesario que agende una fecha para una prueba de confiabilidad"
+              );
+              setIsOpenErrorModal(true);
+              return;
+            }
+            if (new Date(stringFormRef.fecha.current.value) < new Date()) {
+              setErrorMessage(
+                "La fecha de la prueba de confiabilidad debe ser mayor a la fecha actual"
+              );
+              setIsOpenErrorModal(true);
+              return;
+            }
+          }
         }
-      });
-      if (isOpenErrorModal) return;
+      }
 
       if (files[0] === null || files[1] === null) {
         setErrorMessage("Debe subir los documentos");
@@ -161,7 +190,7 @@ export default function FormRegister() {
       }
       // }
     } else {
-      setErrorMessage("Debe llenar todos los campos");
+      setErrorMessage(response.message);
       setIsOpenErrorModal(true);
     }
   };
@@ -203,14 +232,47 @@ export default function FormRegister() {
                 placeholder={input.placeholder}
               />
             ))}
-            <BasicInput
+            {/* <BasicInput
               ref={stringFormRef.dni}
               name={"dni"}
               label={"DNI"}
               type={"text"}
               placeholder={"DNI"}
               numberVerification
-            />
+            /> */}
+            <div className="flex items-start w-full transition-all">
+              <div class="grid space-y-2 w-full">
+                <label
+                  for="price"
+                  class="block text-base font-medium leading-6 text-gray-500"
+                >
+                  Documento de identidad
+                </label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    name="price"
+                    ref={stringFormRef.dni}
+                    id="price"
+                    class="block w-full rounded-lg border-0 pl-4 py-2 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6"
+                    placeholder="Número de documento"
+                  />
+                  <div class="absolute inset-y-0 right-0 flex items-center border border-l-white border-y-gray-300 rounded-r-lg px-2">
+                    <label for="currency" class="sr-only">
+                      Tipo
+                    </label>
+                    <select
+                      id="currency"
+                      name="currency"
+                      class="h-full rounded-md border-0 bg-transparent py-0 pl-2 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                    >
+                      <option>PERUANO</option>
+                      <option>EXTRANJERO</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
             <BasicInput
               ref={stringFormRef.direccion}
               name={"direccion"}
@@ -222,7 +284,7 @@ export default function FormRegister() {
             <BasicInput
               ref={stringFormRef.phone}
               name={"phone"}
-              label={"Teléfono"}
+              label={"Celular"}
               type={"text"}
               placeholder={"999 999 999"}
               numberVerification
@@ -249,7 +311,7 @@ export default function FormRegister() {
                   className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500
                   bg-gray-100"
                   disabled
-                  value="Lima"
+                  value="Lima / Callao"
                 />
               </div>
             </section>
@@ -278,7 +340,7 @@ export default function FormRegister() {
             {needsPoligrafo && (
               <div className="space-y-2">
                 <label className="text-gray-500 flex ">
-                  Fecha Pol&iacute;grafo
+                  Fecha prueba de confiabilidad
                   <span>
                     <PoligrafoPopover />
                   </span>
@@ -322,13 +384,27 @@ export default function FormRegister() {
             </section>
 
             <section className="space-y-2">
-              <label className="text-gray-500">Selecci&oacute;n</label>
+              <label className="text-gray-500">Modalidad de trabajo</label>
+              <div className="flex w-full">
+                <p className="mr-auto">Por horas</p>
+                <Switch
+                  className={`bg-blue-500 relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 opacity-50`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`translate-x-9 pointer-events-none inline-block h-[34px] w-[34px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                  />
+                </Switch>
+              </div>
               <div className="flex space-x-2">
                 <p>
-                  Estoy disponible para desempe&ntilde;arme de manera fija
-                  (contrato)
+                  Activar la casilla si estoy interesado en contrato a tiempo
+                  completo.
                 </p>
-                <CheckBox />
+                <CheckBox
+                  wantsPermanentJob={wantsPermanentJob}
+                  setWantsPermanentJob={setWantsPermanentJob}
+                />
               </div>
             </section>
           </div>

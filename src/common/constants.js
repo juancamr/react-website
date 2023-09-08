@@ -5,7 +5,7 @@ import Questions from "../pages/questions/Questions";
 import RegistroEspecialista from "../pages/especialistas/registro/RegistroEspecialista";
 
 export const ADMIN_URL = "https://admin.tiims.com.pe";
-// export const ADMIN_URL = "http://192.168.1.150:3000";
+//export const ADMIN_URL = "http://192.168.1.150:3000";
 export const WEBSITE_URL = "https://tiims.com.pe";
 
 export const TOTAL_DOWNLOADS = 110;
@@ -187,7 +187,7 @@ export const inputsText = [
   {
     label: "Contraseña",
     name: "password",
-    placeholder: "mypassword",
+    placeholder: "Crea tu contraseña",
     type: "password",
   },
 ];
@@ -237,6 +237,13 @@ export const distritos = [
   "Villa El Salvador",
   "Villa María del Triunfo",
   "Callao",
+  "Bellavista",
+  "Callao",
+  "Carmen de la Legua-Reynoso",
+  "La Perla",
+  "La Punta",
+  "Mi Perú",
+  "Ventanilla",
 ];
 
 export const jobElements = [

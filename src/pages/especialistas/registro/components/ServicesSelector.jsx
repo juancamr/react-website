@@ -9,7 +9,7 @@ const ServicesSelector = ({
   setSelectedServices,
   setNeedsPoligrafo,
 }) => {
-  const [services, setServices] = useState([]);
+  const [services, setServices] = useState([]); //array de todos los servicios
   const [query, setQuery] = useState("");
 
   const filteredServices =
